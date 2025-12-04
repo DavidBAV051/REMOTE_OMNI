@@ -9,9 +9,7 @@
 #include "fsl_common.h"
 #include "fsl_debug_console.h"
 #include "board.h"
-#if defined(SDK_I2C_BASED_COMPONENT_USED) && SDK_I2C_BASED_COMPONENT_USED
 #include "fsl_lpi2c.h"
-#endif /* SDK_I2C_BASED_COMPONENT_USED */
 #if defined(LPFLEXCOMM_INIT_NOT_USED_IN_DRIVER) && LPFLEXCOMM_INIT_NOT_USED_IN_DRIVER
 #include "fsl_lpflexcomm.h"
 #endif /* LPFLEXCOMM_INIT_NOT_USED_IN_DRIVER */

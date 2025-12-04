@@ -1,11 +1,12 @@
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_clock.h:1488:20:CLOCK_EnableClock	24	static
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_port.h:360:20:PORT_SetPinConfig	32	static
+/Users/davidbav/Documents/FINAL EMBEDDED/MCXN947_Project/drivers/fsl_clock.h:1488:20:CLOCK_EnableClock	24	static
+/Users/davidbav/Documents/FINAL EMBEDDED/MCXN947_Project/drivers/fsl_port.h:360:20:PORT_SetPinConfig	32	static
 ../board/pin_mux.c:317:6:BOARD_InitBootPins	8	static
-../board/pin_mux.c:347:6:BOARD_InitDEBUG_UARTPins	16	static
-../board/pin_mux.c:421:6:BOARD_InitSWD_DEBUGPins	24	static
-../board/pin_mux.c:518:6:BOARD_InitLEDsPins	32	static
-../board/pin_mux.c:640:6:BOARD_InitBUTTONsPins	24	static
-../board/pin_mux.c:708:6:BOARD_InitPins	40	static
-../board/pin_mux.c:953:6:BOARD_InitCapturePins	24	static
-../board/pin_mux.c:992:6:BOARD_ADCPins	24	static
-../board/pin_mux.c:1082:6:LPSPI1_InitPins	24	static
+../board/pin_mux.c:348:6:BOARD_InitDEBUG_UARTPins	16	static
+../board/pin_mux.c:422:6:BOARD_InitSWD_DEBUGPins	24	static
+../board/pin_mux.c:519:6:BOARD_InitLEDsPins	32	static
+../board/pin_mux.c:641:6:BOARD_InitBUTTONsPins	24	static
+../board/pin_mux.c:709:6:BOARD_InitPins	40	static
+../board/pin_mux.c:954:6:BOARD_InitCapturePins	24	static
+../board/pin_mux.c:993:6:BOARD_ADCPins	24	static
+../board/pin_mux.c:1083:6:LPSPI1_InitPins	24	static
+../board/pin_mux.c:1184:6:LPI2C2_InitPins	16	static

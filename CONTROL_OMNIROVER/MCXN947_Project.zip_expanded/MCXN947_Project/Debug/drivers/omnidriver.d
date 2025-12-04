@@ -1,227 +1,227 @@
 drivers/omnidriver.o drivers/omnidriver.d: ../drivers/omnidriver.c \
  ../drivers/omnidriver.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\board/board.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\board/clock_config.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_common.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device/fsl_device_registers.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device/MCXN947_cm33_core0.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_ADC.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device/MCXN947_cm33_core0_COMMON.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\CMSIS/core_cm33.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\CMSIS/cmsis_version.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\CMSIS/cmsis_compiler.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\CMSIS/cmsis_gcc.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\CMSIS/m-profile/armv8m_mpu.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device/system_MCXN947_cm33_core0.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device/MCXN947_cm33_core0_features.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_AHBSC.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_BSP32.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_CACHE64_CTRL.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_CACHE64_POLSEL.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_CAN.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_CDOG.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_CMC.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_CRC.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_CTIMER.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_DIGTMP.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_DM.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_DMA.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_EIM.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_EMVSIM.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_ENET.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_ERM.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_EVTG.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_EWM.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_FLEXIO.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_FLEXSPI.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_FMU.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_FMUTEST.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_FREQME.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_GDET.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_GPIO.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_HPDAC.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_I2S.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_I3C.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_INPUTMUX.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_INTM.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_ITRC.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_LPCMP.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_LPDAC.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_LPI2C.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_LPSPI.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_LPTMR.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_LPUART.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_LP_FLEXCOMM.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_MAILBOX.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_MRT.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_NPX.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_OPAMP.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_OSTIMER.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_OTPC.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_PDM.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_PINT.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_PKC.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_PLU.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_PORT.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_POWERQUAD.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_PUF.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_PWM.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_QDC.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_RTC.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_S50.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_SCG.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_SCT.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_SEMA42.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_SINC.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_SMARTDMA.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_SPC.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_SYSCON.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_SYSPM.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_TRDC.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_TSI.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_USB.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_USBDCD.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_USBHS.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_USBHSDCD.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_USBNC.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_USBPHY.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_USDHC.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_UTICK.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_VBAT.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_VREF.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_WUU.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_WWDT.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_common_arm.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_clock.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_common.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_reset.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_gpio.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\board/app.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/board/board.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/board/clock_config.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/drivers/fsl_common.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/fsl_device_registers.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/MCXN947_cm33_core0.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_ADC.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/MCXN947_cm33_core0_COMMON.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/CMSIS/core_cm33.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/CMSIS/cmsis_version.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/CMSIS/cmsis_compiler.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/CMSIS/cmsis_gcc.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/CMSIS/m-profile/armv8m_mpu.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/system_MCXN947_cm33_core0.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/MCXN947_cm33_core0_features.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_AHBSC.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_BSP32.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_CACHE64_CTRL.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_CACHE64_POLSEL.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_CAN.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_CDOG.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_CMC.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_CRC.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_CTIMER.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_DIGTMP.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_DM.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_DMA.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_EIM.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_EMVSIM.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_ENET.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_ERM.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_EVTG.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_EWM.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_FLEXIO.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_FLEXSPI.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_FMU.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_FMUTEST.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_FREQME.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_GDET.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_GPIO.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_HPDAC.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_I2S.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_I3C.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_INPUTMUX.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_INTM.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_ITRC.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_LPCMP.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_LPDAC.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_LPI2C.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_LPSPI.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_LPTMR.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_LPUART.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_LP_FLEXCOMM.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_MAILBOX.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_MRT.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_NPX.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_OPAMP.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_OSTIMER.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_OTPC.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_PDM.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_PINT.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_PKC.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_PLU.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_PORT.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_POWERQUAD.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_PUF.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_PWM.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_QDC.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_RTC.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_S50.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_SCG.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_SCT.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_SEMA42.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_SINC.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_SMARTDMA.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_SPC.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_SYSCON.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_SYSPM.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_TRDC.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_TSI.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_USB.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_USBDCD.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_USBHS.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_USBHSDCD.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_USBNC.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_USBPHY.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_USDHC.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_UTICK.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_VBAT.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_VREF.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_WUU.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_WWDT.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/drivers/fsl_common_arm.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/drivers/fsl_clock.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/drivers/fsl_common.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/drivers/fsl_reset.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/drivers/fsl_gpio.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/board/app.h \
  ../drivers/fsl_pwm.h ../drivers/fsl_common.h ../drivers/fsl_lpadc.h \
  ../drivers/fsl_port.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\utilities\debug_console/fsl_debug_console.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\component\serial_manager/fsl_component_serial_manager.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\component\serial_manager/fsl_component_serial_port_uart.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\component\uart/fsl_adapter_uart.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\source/GPIO_DRIVER.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_port.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\board/pin_mux.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\board/clock_config.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\source/PWM_DRIVER.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_pwm.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\source/ADC_DRIVER.h \
- C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_lpadc.h
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/utilities/debug_console/fsl_debug_console.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/component/serial_manager/fsl_component_serial_manager.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/component/serial_manager/fsl_component_serial_port_uart.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/component/uart/fsl_adapter_uart.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/source/GPIO_DRIVER.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/drivers/fsl_port.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/board/pin_mux.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/board/clock_config.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/source/PWM_DRIVER.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/drivers/fsl_pwm.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/source/ADC_DRIVER.h \
+ /Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/drivers/fsl_lpadc.h
 ../drivers/omnidriver.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\board/board.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\board/clock_config.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_common.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device/fsl_device_registers.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device/MCXN947_cm33_core0.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_ADC.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device/MCXN947_cm33_core0_COMMON.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\CMSIS/core_cm33.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\CMSIS/cmsis_version.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\CMSIS/cmsis_compiler.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\CMSIS/cmsis_gcc.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\CMSIS/m-profile/armv8m_mpu.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device/system_MCXN947_cm33_core0.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device/MCXN947_cm33_core0_features.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_AHBSC.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_BSP32.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_CACHE64_CTRL.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_CACHE64_POLSEL.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_CAN.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_CDOG.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_CMC.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_CRC.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_CTIMER.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_DIGTMP.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_DM.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_DMA.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_EIM.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_EMVSIM.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_ENET.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_ERM.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_EVTG.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_EWM.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_FLEXIO.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_FLEXSPI.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_FMU.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_FMUTEST.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_FREQME.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_GDET.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_GPIO.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_HPDAC.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_I2S.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_I3C.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_INPUTMUX.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_INTM.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_ITRC.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_LPCMP.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_LPDAC.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_LPI2C.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_LPSPI.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_LPTMR.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_LPUART.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_LP_FLEXCOMM.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_MAILBOX.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_MRT.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_NPX.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_OPAMP.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_OSTIMER.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_OTPC.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_PDM.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_PINT.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_PKC.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_PLU.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_PORT.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_POWERQUAD.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_PUF.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_PWM.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_QDC.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_RTC.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_S50.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_SCG.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_SCT.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_SEMA42.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_SINC.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_SMARTDMA.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_SPC.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_SYSCON.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_SYSPM.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_TRDC.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_TSI.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_USB.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_USBDCD.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_USBHS.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_USBHSDCD.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_USBNC.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_USBPHY.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_USDHC.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_UTICK.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_VBAT.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_VREF.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_WUU.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\device\periph/PERI_WWDT.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_common_arm.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_clock.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_common.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_reset.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_gpio.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\board/app.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/board/board.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/board/clock_config.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/drivers/fsl_common.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/fsl_device_registers.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/MCXN947_cm33_core0.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_ADC.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/MCXN947_cm33_core0_COMMON.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/CMSIS/core_cm33.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/CMSIS/cmsis_version.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/CMSIS/cmsis_compiler.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/CMSIS/cmsis_gcc.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/CMSIS/m-profile/armv8m_mpu.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/system_MCXN947_cm33_core0.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/MCXN947_cm33_core0_features.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_AHBSC.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_BSP32.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_CACHE64_CTRL.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_CACHE64_POLSEL.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_CAN.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_CDOG.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_CMC.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_CRC.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_CTIMER.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_DIGTMP.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_DM.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_DMA.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_EIM.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_EMVSIM.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_ENET.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_ERM.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_EVTG.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_EWM.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_FLEXIO.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_FLEXSPI.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_FMU.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_FMUTEST.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_FREQME.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_GDET.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_GPIO.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_HPDAC.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_I2S.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_I3C.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_INPUTMUX.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_INTM.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_ITRC.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_LPCMP.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_LPDAC.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_LPI2C.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_LPSPI.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_LPTMR.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_LPUART.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_LP_FLEXCOMM.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_MAILBOX.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_MRT.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_NPX.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_OPAMP.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_OSTIMER.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_OTPC.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_PDM.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_PINT.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_PKC.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_PLU.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_PORT.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_POWERQUAD.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_PUF.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_PWM.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_QDC.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_RTC.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_S50.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_SCG.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_SCT.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_SEMA42.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_SINC.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_SMARTDMA.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_SPC.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_SYSCON.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_SYSPM.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_TRDC.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_TSI.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_USB.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_USBDCD.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_USBHS.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_USBHSDCD.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_USBNC.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_USBPHY.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_USDHC.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_UTICK.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_VBAT.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_VREF.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_WUU.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/device/periph/PERI_WWDT.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/drivers/fsl_common_arm.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/drivers/fsl_clock.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/drivers/fsl_common.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/drivers/fsl_reset.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/drivers/fsl_gpio.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/board/app.h:
 ../drivers/fsl_pwm.h:
 ../drivers/fsl_common.h:
 ../drivers/fsl_lpadc.h:
 ../drivers/fsl_port.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\utilities\debug_console/fsl_debug_console.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\component\serial_manager/fsl_component_serial_manager.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\component\serial_manager/fsl_component_serial_port_uart.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\component\uart/fsl_adapter_uart.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\source/GPIO_DRIVER.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_port.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\board/pin_mux.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\board/clock_config.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\source/PWM_DRIVER.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_pwm.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\source/ADC_DRIVER.h:
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_lpadc.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/utilities/debug_console/fsl_debug_console.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/component/serial_manager/fsl_component_serial_manager.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/component/serial_manager/fsl_component_serial_port_uart.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/component/uart/fsl_adapter_uart.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/source/GPIO_DRIVER.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/drivers/fsl_port.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/board/pin_mux.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/board/clock_config.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/source/PWM_DRIVER.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/drivers/fsl_pwm.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/source/ADC_DRIVER.h:
+/Users/davidbav/Documents/FINAL\ EMBEDDED/MCXN947_Project/drivers/fsl_lpadc.h:

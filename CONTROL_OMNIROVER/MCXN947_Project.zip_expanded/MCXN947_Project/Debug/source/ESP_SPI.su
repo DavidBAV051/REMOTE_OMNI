@@ -1,17 +1,17 @@
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_lpspi.h:524:20:LPSPI_Enable	16	static
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_lpspi.h:570:23:LPSPI_GetRxFifoSize	16	static
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_lpspi.h:580:24:LPSPI_GetTxFifoCount	16	static
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_lpspi.h:590:24:LPSPI_GetRxFifoCount	16	static
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_lpspi.h:608:20:LPSPI_ClearStatusFlags	16	static
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_lpspi.h:622:24:LPSPI_GetTcr	32	static
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_lpspi.h:663:20:LPSPI_EnableInterrupts	16	static
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_lpspi.h:678:20:LPSPI_DisableInterrupts	16	static
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_lpspi.h:792:20:LPSPI_SelectTransferPCS	16	static
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_lpspi.h:808:20:LPSPI_SetPCSContinous	24	static
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_lpspi.h:839:20:LPSPI_FlushFifo	16	static
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_lpspi.h:855:20:LPSPI_SetFifoWatermarks	24	static
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_lpspi.h:1000:20:LPSPI_WriteData	16	static
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_lpspi.h:1014:24:LPSPI_ReadData	16	static
+/Users/davidbav/Documents/FINAL EMBEDDED/MCXN947_Project/drivers/fsl_lpspi.h:524:20:LPSPI_Enable	16	static
+/Users/davidbav/Documents/FINAL EMBEDDED/MCXN947_Project/drivers/fsl_lpspi.h:570:23:LPSPI_GetRxFifoSize	16	static
+/Users/davidbav/Documents/FINAL EMBEDDED/MCXN947_Project/drivers/fsl_lpspi.h:580:24:LPSPI_GetTxFifoCount	16	static
+/Users/davidbav/Documents/FINAL EMBEDDED/MCXN947_Project/drivers/fsl_lpspi.h:590:24:LPSPI_GetRxFifoCount	16	static
+/Users/davidbav/Documents/FINAL EMBEDDED/MCXN947_Project/drivers/fsl_lpspi.h:608:20:LPSPI_ClearStatusFlags	16	static
+/Users/davidbav/Documents/FINAL EMBEDDED/MCXN947_Project/drivers/fsl_lpspi.h:622:24:LPSPI_GetTcr	32	static
+/Users/davidbav/Documents/FINAL EMBEDDED/MCXN947_Project/drivers/fsl_lpspi.h:663:20:LPSPI_EnableInterrupts	16	static
+/Users/davidbav/Documents/FINAL EMBEDDED/MCXN947_Project/drivers/fsl_lpspi.h:678:20:LPSPI_DisableInterrupts	16	static
+/Users/davidbav/Documents/FINAL EMBEDDED/MCXN947_Project/drivers/fsl_lpspi.h:792:20:LPSPI_SelectTransferPCS	16	static
+/Users/davidbav/Documents/FINAL EMBEDDED/MCXN947_Project/drivers/fsl_lpspi.h:808:20:LPSPI_SetPCSContinous	24	static
+/Users/davidbav/Documents/FINAL EMBEDDED/MCXN947_Project/drivers/fsl_lpspi.h:839:20:LPSPI_FlushFifo	16	static
+/Users/davidbav/Documents/FINAL EMBEDDED/MCXN947_Project/drivers/fsl_lpspi.h:855:20:LPSPI_SetFifoWatermarks	24	static
+/Users/davidbav/Documents/FINAL EMBEDDED/MCXN947_Project/drivers/fsl_lpspi.h:1000:20:LPSPI_WriteData	16	static
+/Users/davidbav/Documents/FINAL EMBEDDED/MCXN947_Project/drivers/fsl_lpspi.h:1014:24:LPSPI_ReadData	16	static
 ../source/ESP_SPI.c:29:6:ESP_SPI_Init	64	static
 ../source/ESP_SPI.c:81:6:ESP_SPI_StartTransfer	16	static
 ../source/ESP_SPI.c:123:6:ESP_SPI_IsTransferCompleted	4	static

@@ -173,6 +173,7 @@ void BOARD_InitPins(void);
 void BOARD_InitCapturePins(void);
 void BOARD_ADCPins(void);
 void LPSPI1_InitPins(void);
+void LPI2C2_InitPins(void);
 
 #if defined(__cplusplus)
 }

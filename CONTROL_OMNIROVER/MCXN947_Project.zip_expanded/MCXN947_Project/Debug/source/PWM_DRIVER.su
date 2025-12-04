@@ -1,5 +1,5 @@
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_pwm.h:904:20:PWM_StartTimer	16	static
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_pwm.h:1105:20:PWM_SetPwmLdok	16	static
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_pwm.h:1172:20:PWM_SetupFaultDisableMap	24	static
+/Users/davidbav/Documents/FINAL EMBEDDED/MCXN947_Project/drivers/fsl_pwm.h:904:20:PWM_StartTimer	16	static
+/Users/davidbav/Documents/FINAL EMBEDDED/MCXN947_Project/drivers/fsl_pwm.h:1105:20:PWM_SetPwmLdok	16	static
+/Users/davidbav/Documents/FINAL EMBEDDED/MCXN947_Project/drivers/fsl_pwm.h:1172:20:PWM_SetupFaultDisableMap	24	static
 ../source/PWM_DRIVER.c:11:6:PWM_DRV_Init3PhPwm	88	static
 ../source/PWM_DRIVER.c:59:5:init_pwm	32	static

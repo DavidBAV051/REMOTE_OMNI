@@ -22,12 +22,19 @@
 #include "ADC_DRIVER.h"
 #include "ESP_SPI.h"     // Include the SPI driver
 #include "RobotTelemetry.h" // Include the new struct definition
+#include "fsl_lpi2c.h"
+#include "mpu9250_driver.h"
 #include "fsl_debug_console.h"
 
 //*Definitions*/
 #define LPSPI_MASTER_CLK_FREQ CLOCK_GetLPFlexCommClkFreq(1u)
 #define EXAMPLE_LPSPI_MASTER_PCS_FOR_INIT     (kLPSPI_Pcs0)
 #define EXAMPLE_LPSPI_MASTER_PCS_FOR_TRANSFER (kLPSPI_MasterPcs0)
+
+// Configuración para el MPU9250
+#define LPI2C_MASTER_BASE   ((LPI2C_Type *)EXAMPLE_I2C_MASTER_BASE)
+#define LPI2C_MASTER_CLOCK_FREQ CLOCK_GetLPFlexCommClkFreq(7u)
+#define I2C_BAUDRATE        400000U     // 400kHz para lectura rápida
 
 #define CTIMER_FREQ_HZ          150000000U
 // The manufacturer specs for the output shaft
@@ -309,7 +316,7 @@ ROBOT_T ROBOT = {
 	.M3 = &M3,
 	.M4 = &M4
 };
-
+mpu9250_handle_t imuRobot;
 //*Prototypes*/
 void init_hardware(void);
 float counts_to_rad_s(uint32_t period_counts);
@@ -410,6 +417,13 @@ int main(void)
     /* Structure of initialize PWM */
     init_pwm();
 
+    /* --- NUEVO: Inicialización del Hardware I2C --- */
+    lpi2c_master_config_t masterConfig;
+    LPI2C_MasterGetDefaultConfig(&masterConfig);
+    masterConfig.baudRate_Hz = I2C_BAUDRATE;
+    // Habilitar el reloj para el LPI2C0
+    LPI2C_MasterInit(LPI2C_MASTER_BASE, &masterConfig, LPI2C_MASTER_CLOCK_FREQ);
+
 	init_LPTMR_12MHz(LPTMR0, 5000);
 	lptmr_attach_callback(LPTMR0, TIMER_0);
 
@@ -457,9 +471,22 @@ int main(void)
 
 	LPTMR_StartTimer(LPTMR0);
 	LPTMR_StartTimer(LPTMR1); //PID_TIMER
+	imuRobot.i2cBase = LPI2C_MASTER_BASE;
+	MPU9250_Calibrate(&imuRobot);
+	status_t imuStatus = MPU9250_Init(&imuRobot, LPI2C_MASTER_BASE);
 
+	    if (imuStatus == kStatus_Success) {
+	        PRINTF("IMU Detectada. Calibrando (NO MOVER EL ROBOT)...\r\n");
+	        MPU9250_Calibrate(&imuRobot);
+	        PRINTF("Calibracion IMU Finalizada.\r\n");
+	    } else {
+	        PRINTF("ERROR: No se detecto la IMU. Revise conexion.\r\n");
+	    }
 	while (1U)
 	{
+		if(MPU9250_ReadSensor(&imuRobot) == kStatus_Success){
+
+		}
 	}
 }
 
@@ -476,6 +503,10 @@ void init_hardware(void){
 	/* attach FRO 12M to FLEXCOMM1 */
 	CLOCK_SetClkDiv(kCLOCK_DivFlexcom1Clk, 1u);
 	CLOCK_AttachClk(kFRO12M_to_FLEXCOMM1);
+
+    /* attach FRO 12M to FLEXCOMM2 */
+    CLOCK_SetClkDiv(kCLOCK_DivFlexcom7Clk, 1u);
+    CLOCK_AttachClk(kFRO12M_to_FLEXCOMM7);
 
 	CLOCK_SetClkDiv(kCLOCK_DivAdc0Clk, 1U);
 	CLOCK_AttachClk(kFRO_HF_to_ADC0);

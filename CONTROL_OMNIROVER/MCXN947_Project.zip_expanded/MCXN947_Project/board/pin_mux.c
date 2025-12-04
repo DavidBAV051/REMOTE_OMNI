@@ -321,6 +321,7 @@ void BOARD_InitBootPins(void)
     BOARD_InitCapturePins();
     BOARD_ADCPins();
     LPSPI1_InitPins();
+    LPI2C2_InitPins();
 }
 
 /* clang-format off */
@@ -1179,6 +1180,58 @@ void LPSPI1_InitPins(void)
                                                       kPORT_UnlockRegister};
     /* PORT0_27 (pin E10) is configured as FC1_P3 */
     PORT_SetPinConfig(PORT0, 27U, &port0_27_pinE10_config);
+}
+void LPI2C2_InitPins(void)
+{
+    /* Enables the clock for PORT4: Enables clock */
+    CLOCK_EnableClock(kCLOCK_Port3);
+
+    //SDA
+    const port_pin_config_t port3_2_pinP1_config = {/* Internal pull-up resistor is enabled */
+                                                    .pullSelect = kPORT_PullUp,
+                                                    /* Low internal pull resistor value is selected. */
+                                                    .pullValueSelect = kPORT_LowPullResistor,
+                                                    /* Fast slew rate is configured */
+                                                    .slewRate = kPORT_FastSlewRate,
+                                                    /* Passive input filter is disabled */
+                                                    .passiveFilterEnable = kPORT_PassiveFilterDisable,
+                                                    /* Open drain output is disabled */
+                                                    .openDrainEnable = kPORT_OpenDrainDisable,
+                                                    /* Low drive strength is configured */
+                                                    .driveStrength = kPORT_LowDriveStrength,
+                                                    /* Pin is configured as FC2_P0 */
+                                                    .mux = kPORT_MuxAlt2,
+                                                    /* Digital input enabled */
+                                                    .inputBuffer = kPORT_InputBufferEnable,
+                                                    /* Digital input is not inverted */
+                                                    .invertInput = kPORT_InputNormal,
+                                                    /* Pin Control Register fields [15:0] are not locked */
+                                                    .lockRegister = kPORT_UnlockRegister};
+    /* PORT4_0 (pin P1) is configured as FC2_P0 */
+    PORT_SetPinConfig(PORT3, 2U, &port3_2_pinP1_config);
+
+    const port_pin_config_t port3_3_pinP2_config = {/* Internal pull-up resistor is enabled */
+                                                    .pullSelect = kPORT_PullUp,
+                                                    /* Low internal pull resistor value is selected. */
+                                                    .pullValueSelect = kPORT_LowPullResistor,
+                                                    /* Fast slew rate is configured */
+                                                    .slewRate = kPORT_FastSlewRate,
+                                                    /* Passive input filter is disabled */
+                                                    .passiveFilterEnable = kPORT_PassiveFilterDisable,
+                                                    /* Open drain output is disabled */
+                                                    .openDrainEnable = kPORT_OpenDrainDisable,
+                                                    /* Low drive strength is configured */
+                                                    .driveStrength = kPORT_LowDriveStrength,
+                                                    /* Pin is configured as FC2_P1 */
+                                                    .mux = kPORT_MuxAlt2,
+                                                    /* Digital input enabled */
+                                                    .inputBuffer = kPORT_InputBufferEnable,
+                                                    /* Digital input is not inverted */
+                                                    .invertInput = kPORT_InputNormal,
+                                                    /* Pin Control Register fields [15:0] are not locked */
+                                                    .lockRegister = kPORT_UnlockRegister};
+    /* PORT4_1 (pin P2) is configured as FC2_P1 */
+    PORT_SetPinConfig(PORT3, 3U, &port3_3_pinP2_config);
 }
 /***********************************************************************************************************************
  * EOF

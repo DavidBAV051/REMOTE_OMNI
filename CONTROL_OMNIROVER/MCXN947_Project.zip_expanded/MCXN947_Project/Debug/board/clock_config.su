@@ -1,4 +1,4 @@
-C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_clock.h:1488:20:CLOCK_EnableClock	24	static
+/Users/davidbav/Documents/FINAL EMBEDDED/MCXN947_Project/drivers/fsl_clock.h:1488:20:CLOCK_EnableClock	24	static
 ../board/clock_config.c:53:6:BOARD_InitBootClocks	8	static
 ../board/clock_config.c:90:6:BOARD_BootClockFRO12M	8	static
 ../board/clock_config.c:137:6:BOARD_BootClockFROHF48M	8	static
