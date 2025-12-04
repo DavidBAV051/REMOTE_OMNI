@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdk-packages>
+<package hash="1748133370981" path="C:\Users\diego\mcuxpresso\02\SDKPackages\SDK_25_03_00_FRDM-MCXN947.zip" schema="manifest-schema/sdk_manifest_v3.15.xsd"/>
+<package hash="1750372003884" path="C:\Users\diego\mcuxpresso\02\SDKPackages\com.nxp.mcuxpresso.sdk.sdk_2.x_lpcxpresso860max_p2site_24.12.0.20191125144613344754598894431626.zip" schema="manifest-schema/sdk_manifest_v3.15.xsd"/>
+</sdk-packages>

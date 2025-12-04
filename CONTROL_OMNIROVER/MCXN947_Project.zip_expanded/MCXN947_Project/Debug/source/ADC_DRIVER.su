@@ -1,0 +1,3 @@
+C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_lpadc.h:1081:20:LPADC_DoSoftwareTrigger	16	static
+../source/ADC_DRIVER.c:21:6:init_ADC	112	static
+../source/ADC_DRIVER.c:80:10:read_ADC	48	static

@@ -1,0 +1,12 @@
+C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\drivers/fsl_gpio.h:345:20:GPIO_PinWrite	24	static
+../source/NRF_DRIVER.c:13:6:NRF_CSN_Low	8	static
+../source/NRF_DRIVER.c:14:6:NRF_CSN_High	8	static
+../source/NRF_DRIVER.c:15:6:NRF_CE_Low	8	static
+../source/NRF_DRIVER.c:16:6:NRF_CE_High	8	static
+../source/NRF_DRIVER.c:19:9:SPI_Transfer	40	static
+../source/NRF_DRIVER.c:31:6:NRF_WriteReg	16	static
+../source/NRF_DRIVER.c:43:6:NRF_Init_Rx	24	static
+../source/NRF_DRIVER.c:79:6:NRF_Read_Payload	24	static
+../source/NRF_DRIVER.c:106:9:NRF_Check_Status	24	static
+../source/NRF_DRIVER.c:129:9:NRF_ReadReg	24	static
+../source/NRF_DRIVER.c:144:6:NRF_Poll_Data	24	static

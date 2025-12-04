@@ -1,0 +1,44 @@
+/*
+ * NRF_DRIVER.h
+ *
+ *  Created on: Nov 29, 2025
+ *      Author: diego
+ */
+
+#ifndef NRF_DRIVER_H_
+#define NRF_DRIVER_H_
+
+#include "fsl_gpio.h"
+#include "fsl_lpspi.h"
+
+/* --- PIN DEFINITIONS --- */
+#define NRF_CSN_GPIO    GPIO0
+#define NRF_CSN_PIN     27U
+#define NRF_CE_GPIO     GPIO0
+#define NRF_CE_PIN      28U
+#define NRF_IRQ_GPIO    GPIO1
+#define NRF_IRQ_PIN     22U
+
+/* --- COMMANDS & REGISTERS --- */
+#define CMD_R_REGISTER    0x00
+#define CMD_W_REGISTER    0x20
+#define CMD_R_RX_PAYLOAD  0x61
+#define CMD_FLUSH_RX      0xE2
+#define CMD_NOP           0xFF
+
+#define NRF_CONFIG      0x00
+#define NRF_EN_AA       0x01
+#define NRF_RF_CH       0x05
+#define NRF_RF_SETUP    0x06
+#define NRF_STATUS      0x07
+#define NRF_RX_PW_P0    0x11
+
+void NRF_Init_Rx(LPSPI_Type * spi_base);
+void NRF_WriteReg(LPSPI_Type * spi_base, uint8_t reg, uint8_t value);
+void NRF_Read_Payload(LPSPI_Type * spi_base, char *buffer);
+//uint8_t NRF_Check_Status(LPSPI_Type* spi_base)
+
+uint8_t SPI_Transfer(LPSPI_Type * spi_base, uint8_t data);
+
+
+#endif /* NRF_DRIVER_H_ */

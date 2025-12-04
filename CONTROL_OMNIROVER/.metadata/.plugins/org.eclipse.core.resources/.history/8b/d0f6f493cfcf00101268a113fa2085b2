@@ -1,0 +1,159 @@
+/*
+ * Copyright Diego Iván Sigala Sánchez
+ * Copyright 2025
+ *
+ *
+ */
+#ifndef OMNIDRIVER_H_
+#define OMNIDRIVER_H_
+
+#include "board.h"
+#include "app.h"
+#include "fsl_pwm.h"
+#include "fsl_lpadc.h"
+#include "fsl_port.h"
+#include "fsl_debug_console.h"
+
+
+#define PID_TIMER_TICKS    2000
+#define PID_TIMER_SRC_FREQ 12000000
+#define PID_TIMER_FREQ     (float)(PID_TIMER_SRC_FREQ/PID_TIMER_TICKS)
+#define MAX_PWM_DEFINITION 65535
+#define MIN_PWM_DEFINITION -65535
+
+// Robot Physical Constants (Meters)
+#define ROBOT_LX           0.125f   // 12.5 cm - Dist from center to wheel along X
+#define ROBOT_LY           0.1575f  // 15.75 cm - Dist from center to wheel along Y
+#define WHEEL_RADIUS       0.05f    // Example: 5cm (Update this to your actual wheel radius!)
+
+// Communication Limits
+#define MAX_LINEAR_SPEED   0.5f     // m/s (Safe limit)
+#define MAX_ANGULAR_SPEED  2.0f     // rad/s (Rotation speed)
+
+/*Definitions*/
+typedef enum {
+  MOTOR_FORWARD,
+  MOTOR_BACKWARDS,
+} MOTOR_DIRECTION;
+
+
+typedef struct _ENCODER_PIN{
+	uint32_t PORT;
+	uint32_t PIN;
+}ENCODER_PIN;
+
+typedef struct _ENABLE_PIN{
+	uint32_t PORT;
+	uint32_t PIN;
+}ENABLE_PIN;
+
+/**
+ * @brief Structure to hold the necessary hardware information for a single PWM channel.
+ */
+typedef struct _PWM_CTRL_t{
+    PWM_Type *pwm_base;        // Pointer to the PWM peripheral base address (e.g., PWM1)
+    pwm_submodule_t submodule; // The specific submodule (e.g., kPWM_Module_0)
+    pwm_channels_t channel;    // The specific channel (e.g., kPWM_PwmA, kPWM_PwmB)
+    pwm_mode_t pwm_mode;       // The PWM mode set during initialization (e.g., kPWM_SignedCenterAligned)
+} PWM_CTRL_t;
+
+
+/**
+ * @brief Structure to hold PID coefficients and limits.
+ */
+typedef struct _PID_CONFIG{ //Struct to configure the PID parameters
+
+    float Kp;
+    float Ki;
+    float Kd;
+    float previous_err1; // e(k)
+    float previous_err2; // e(k-1)
+    float integral_err;  // Sum of error
+    float last_output;  // PID output in last control period
+    float max_integral; // PID maximum integral value limitation
+    float min_integral; // PID minimum integral value limitation
+
+} PID_CONFIG;
+
+/**
+ * @brief Structure to hold ADC configuration for the motor (e.g. Current Sensing)
+ */
+typedef struct _ADC_CONFIG_t {
+	ADC_Type *adc_base;      // Pointer to ADC peripheral (ADC0 or ADC1)
+	SPC_Type *spc_base;
+	VREF_Type *vref_base;
+	uint32_t channelNumber;  // ADC Channel Number (e.g., 0, 3, 8)
+	uint32_t commandId;      // Command ID to use (1-15)
+
+	// Pin Mux Information
+	uint32_t mux_port;     // PORT peripheral (PORT0, PORT1, etc.)
+	uint32_t mux_pin;        // Pin number (0-31)
+
+	// Raw value storage
+	uint32_t last_raw_value;
+} ADC_CONFIG_t;
+
+//Struct to pass the data of the motor to the callback
+typedef struct _MOTOR_T{
+
+    float target;    //Desired rotational speed
+    float speed;     //rotational speed of the motor w = 2pi * speed (angular velocity)
+
+    float current; //Current of the motor
+
+    MOTOR_DIRECTION direction;
+    ENABLE_PIN *MINA;    //The enable clockwise
+    ENABLE_PIN *MINB;    //The enable counterclockwise
+    ENCODER_PIN *ENC_A;   //Encoder A pin
+    ENCODER_PIN *ENC_B;   //Encoder B pin
+
+    PWM_CTRL_t *PWM; // The PWM control structure for speed
+    PID_CONFIG *PID; //The pid data for each motor
+    ADC_CONFIG_t *ADC; // Pointer to ADC structure for this motor
+
+} MOTOR_T;
+
+typedef struct _ROBOT_T{
+
+	float vx;
+	float vy;
+	float phi;
+	MOTOR_T *M1;
+	MOTOR_T *M2;
+	MOTOR_T *M3;
+	MOTOR_T *M4;
+
+} ROBOT_T;
+
+
+
+/*Prototypes*/
+/**
+ * @brief Updates the duty cycle for a specific motor's PWM channel.
+ *
+ * This function abstracts the core logic from the TIMER_1 callback:
+ * 1. Calls PWM_UpdatePwmDutycycle.
+ * 2. Calls PWM_SetPwmLdok to apply the change.
+ *
+ * @param motor Pointer to the motor structure to update.
+ * @param dutyCyclePercent New PWM pulse width (0 to 100).
+ */
+
+void MOTOR_init(MOTOR_T *motor);
+void MOTOR_run(MOTOR_T *motor, uint32_t duty_cyle, MOTOR_DIRECTION direction);
+void MOTOR_SetPwmDutyCycle(MOTOR_T *motor, uint16_t dutyCycle);
+
+// ADC Related Prototypes
+void MOTOR_ADC_Init(MOTOR_T *motor);
+void MOTOR_ADC_Read(MOTOR_T *motor);
+
+//Enable functions
+void ENABLE_Setup(ENABLE_PIN *enable);
+void ENABLE_SetDirection(ENABLE_PIN *enable);
+void ENABLE_SetOutput(ENABLE_PIN *enable, uint32_t output);
+
+//PID
+float pid_compute(MOTOR_T* motor);
+void ROBOT_compute_kinematics(ROBOT_T *robot);
+
+#endif /* OMNIDRIVER_H_ */

@@ -1,0 +1,11 @@
+../drivers/fsl_pwm.h:1105:20:PWM_SetPwmLdok	16	static
+../drivers/omnidriver.c:27:6:MOTOR_init	16	static
+../drivers/omnidriver.c:51:6:MOTOR_run	24	static
+../drivers/omnidriver.c:78:6:MOTOR_SetPwmDutyCycle	24	static
+../drivers/omnidriver.c:103:6:ENABLE_Setup	16	static
+../drivers/omnidriver.c:129:6:ENABLE_SetDirection	16	static
+../drivers/omnidriver.c:156:6:ENABLE_SetOutput	16	static
+../drivers/omnidriver.c:188:6:MOTOR_ADC_Init	32	static
+../drivers/omnidriver.c:194:6:MOTOR_ADC_Read	24	static
+../drivers/omnidriver.c:205:7:pid_compute	32	static
+../drivers/omnidriver.c:262:6:ROBOT_compute_kinematics	56	static

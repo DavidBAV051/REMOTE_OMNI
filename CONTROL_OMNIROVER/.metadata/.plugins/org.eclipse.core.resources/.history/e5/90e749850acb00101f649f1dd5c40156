@@ -1,0 +1,250 @@
+/*
+ * Copyright Diego Iván Sigala Sánchez
+ * Copyright 2025
+ *
+ *
+ */
+
+#include "omnidriver.h"
+#include "fsl_common.h" // Generally needed for driver implementations
+#include "GPIO_DRIVER.h"
+#include "PWM_DRIVER.h"
+#include "ADC_DRIVER.h"
+
+/*Variables */
+
+gpio_pin_config_t gpio_output = {
+	.pinDirection = kGPIO_DigitalOutput,
+	.outputLogic = 0U
+};
+
+
+//Functions
+
+void MOTOR_init(MOTOR_T *motor){
+
+	if(motor == NULL){
+		PRINTF("INVALID INPUT FOR MOTOR POINTER (NULL)");
+		return;
+	}
+	//Enables
+	ENABLE_Setup(motor->MINA);
+	ENABLE_Setup(motor->MINB);
+
+	ENABLE_SetDirection(motor->MINA);
+	ENABLE_SetDirection(motor->MINB);
+
+	ENABLE_SetOutput(motor->MINA, 0);
+	ENABLE_SetOutput(motor->MINB, 0);
+
+	// If ADC config exists, initialize it
+	if(motor->ADC != NULL) {
+		//MOTOR_ADC_PinMux(motor);
+		MOTOR_ADC_Init(motor);
+	}
+
+}
+
+void MOTOR_run(MOTOR_T *motor, uint32_t duty_cyle, MOTOR_DIRECTION direction){
+
+	if(motor == NULL){
+		PRINTF("INVALID INPUT FOR MOTOR POINTER (NULL)");
+		return;
+	}
+
+	if(direction){
+		ENABLE_SetOutput(motor->MINA, 1);
+		ENABLE_SetOutput(motor->MINB, 0);
+	} else {
+		ENABLE_SetOutput(motor->MINA, 0);
+		ENABLE_SetOutput(motor->MINB, 1);
+	}
+
+	MOTOR_SetPwmDutyCycle(motor, duty_cyle);
+
+
+}
+
+
+
+/**
+ * @brief Updates the duty cycle for a specific motor's PWM channel.
+ *
+ * This function abstracts the core logic from the TIMER_1 callback.
+ */
+void MOTOR_SetPwmDutyCycle(MOTOR_T *motor, uint16_t dutyCycle)
+{
+    // The core logic is: update the duty cycle, then set the Load Okay (LDOK) bit.
+
+    // 1. Update the PWM buffer register
+    // The mode (kPWM_SignedCenterAligned) is assumed to be part of the PWM_CTRL_t structure
+    // or implicitly known from the system setup (as it was hardcoded in the original code).
+    // Based on the original implementation, the mode is known to be kPWM_SignedCenterAligned.
+	/*
+	PWM_UpdatePwmDutycycle(motor->PWM->pwm_base,
+                           motor->PWM->submodule,
+                           motor->PWM->channel,
+                           kPWM_SignedCenterAligned, // Fixed mode from your original application
+                           dutyCyclePercent);
+	*/
+	PWM_UpdatePwmDutycycleHighAccuracy(motor->PWM->pwm_base,
+			                           motor->PWM->submodule, \
+									   motor->PWM->channel,
+									   kPWM_SignedCenterAligned,
+									   dutyCycle);
+    // 2. Set the Load Okay (LDOK) bit for the specific submodule.
+    // kPWM_Control_Module_X is equivalent to (1U << kPWM_Module_X).
+    PWM_SetPwmLdok(motor->PWM->pwm_base, (uint8_t)(1U << motor->PWM->submodule), true);
+}
+
+void ENABLE_Setup(ENABLE_PIN *enable){
+
+    switch(enable->PORT)
+    {
+        case 0:
+        	GPIO_PinInit(GPIO0, enable->PIN, &gpio_output);
+        	break;
+        case 1:
+        	GPIO_PinInit(GPIO1, enable->PIN, &gpio_output);
+        	break;
+        case 2:
+        	GPIO_PinInit(GPIO2, enable->PIN, &gpio_output);
+        	break;
+        case 3:
+        	GPIO_PinInit(GPIO3, enable->PIN, &gpio_output);
+        	break;
+        case 4:
+			GPIO_PinInit(GPIO4, enable->PIN, &gpio_output);
+			break;
+        default:
+        	PRINTF("INVALID PORT: %p\r\n", enable->PORT);
+        	break;
+    }
+    return;
+}
+
+void ENABLE_SetDirection(ENABLE_PIN *enable){
+
+	switch(enable->PORT)
+    {
+        case 0:
+            PORT0_SetDirection(enable->PIN, ARM_GPIO_OUTPUT);
+            break;
+        case 1:
+            PORT1_SetDirection(enable->PIN, ARM_GPIO_OUTPUT);
+            break;
+        case 2:
+			PORT2_SetDirection(enable->PIN, ARM_GPIO_OUTPUT);
+			break;
+        case 3:
+            PORT3_SetDirection(enable->PIN, ARM_GPIO_OUTPUT);
+            break;
+        case 4:
+            PORT4_SetDirection(enable->PIN, ARM_GPIO_OUTPUT);
+            break;
+        default:
+        	PRINTF("INVALID PORT: %p\r\n", enable->PORT);
+        	break;
+
+    }
+	return;
+}
+
+void ENABLE_SetOutput(ENABLE_PIN *enable, uint32_t output){
+
+	switch(enable->PORT)
+    {
+        case 0:
+            PORT0_SetOutput(enable->PIN, output);
+            break;
+        case 1:
+            PORT1_SetOutput(enable->PIN, output);
+            break;
+        case 2:
+			PORT2_SetOutput(enable->PIN, output);
+			break;
+        case 3:
+            PORT3_SetOutput(enable->PIN, output);
+            break;
+        case 4:
+            PORT4_SetOutput(enable->PIN, output);
+            break;
+        default:
+        	PRINTF("INVALID PORT: %p\r\n", enable->PORT);
+            break;
+    }
+	return;
+}
+
+
+// ***************************************************************
+// * ADC FUNCTIONS
+// ***************************************************************
+
+
+void MOTOR_ADC_Init(MOTOR_T *motor) {
+
+	init_ADC(motor->ADC->adc_base, motor->ADC->spc_base, motor->ADC->vref_base, motor->ADC->channelNumber, motor->ADC->commandId);
+
+}
+
+void MOTOR_ADC_Read(MOTOR_T * motor)
+{
+    if (motor && motor->ADC)
+    {
+        motor->ADC->last_raw_value = read_ADC(motor->ADC->adc_base, motor->ADC->commandId);
+        motor->current = (float) motor->ADC->last_raw_value  ;
+    }
+}
+
+
+//CONTROL
+float pid_compute(MOTOR_T* motor)
+{
+    float output;
+    float error;
+    float dt =  1.0f / ( PID_TIMER_FREQ);
+
+    if(motor->direction == MOTOR_FORWARD){
+    	error = motor->target - motor->speed;
+    } else {
+    	error = motor->target + motor->speed;
+    }
+    /* Add current error to the integral error */
+    motor->PID->integral_err += error*dt;
+
+
+    /* If the integral error is out of the range, it will be limited */
+    motor->PID->integral_err = MIN(motor->PID->integral_err, motor->PID->max_integral);
+    motor->PID->integral_err = MAX(motor->PID->integral_err, motor->PID->min_integral);
+
+    /* Calculate the pid control value by location formula */
+    /* u(k) = e(k)*Kp + (e(k)-e(k-1))*Kd + integral*Ki */
+    output = error * motor->PID->Kp +
+             ( (error - motor->PID->previous_err1) / dt ) * motor->PID->Kd +
+			 motor->PID->integral_err * motor->PID->Ki;
+
+    /* If the output is out of the range, it will be limited */
+    output = MIN(output, MAX_PWM_DEFINITION);
+    output = MAX(output, MIN_PWM_DEFINITION);
+
+
+    if(output > 0){
+    	output = abs(output);
+    	motor->direction = MOTOR_FORWARD;
+    	MOTOR_run(motor, output, MOTOR_FORWARD);
+    } else {
+    	output = abs(output);
+    	motor->direction = MOTOR_BACKWARDS;
+    	MOTOR_run(motor, output, MOTOR_BACKWARDS);
+    }
+
+    /* Update previous error */
+    motor->PID->previous_err1 = error;
+
+    return output;
+
+}
+
+
+

@@ -1,0 +1,35 @@
+/* RobotTelemetry.h */
+#ifndef ROBOT_TELEMETRY_H_
+#define ROBOT_TELEMETRY_H_
+
+#include <stdint.h>
+
+/* Packet ID to distinguish this specific telemetry packet */
+#define TELEMETRY_PACKET_ID 0xA1
+
+/* * Struct Layout (Must match ESP32 receiver side)
+ * Total Size: 36 bytes (fits in 40-byte SPI buffer)
+ */
+typedef struct __attribute__((packed)) {
+    uint32_t packet_header;     // 4 Bytes: Header/Packet Counter
+
+    /* Motor Speeds (rad/s) */
+    float speed_m1;             // 4 Bytes
+    float speed_m2;             // 4 Bytes
+    float speed_m3;             // 4 Bytes
+    float speed_m4;             // 4 Bytes
+
+    /* Motor Currents (ADC Raw Values) */
+    uint16_t adc_m1;            // 2 Bytes
+    uint16_t adc_m2;            // 2 Bytes
+    uint16_t adc_m3;            // 2 Bytes
+    uint16_t adc_m4;            // 2 Bytes
+
+    /* Reserved for "Many other things" */
+    uint32_t reserved_flags;    // 4 Bytes
+    uint32_t timestamp;         // 4 Bytes
+} RobotTelemetry_t;
+
+void Robot_SendTelemetry(void);
+
+#endif /* ROBOT_TELEMETRY_H_ */

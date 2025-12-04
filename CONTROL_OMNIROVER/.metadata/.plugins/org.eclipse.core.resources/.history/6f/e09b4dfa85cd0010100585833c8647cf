@@ -1,0 +1,64 @@
+/*
+ * NRF_DRIVER.h
+ *
+ *  Created on: Nov 29, 2025
+ *      Author: diego
+ */
+
+#ifndef NRF_DRIVER_H_
+#define NRF_DRIVER_H_
+
+#include "fsl_gpio.h"
+#include "fsl_lpspi.h"
+#include "fsl_port.h"
+#include "fsl_debug_console.h"
+
+
+/* --- PIN DEFINITIONS --- */
+#define NRF_CSN_GPIO    GPIO0
+#define NRF_CSN_PIN     27U
+#define NRF_CE_GPIO     GPIO0
+#define NRF_CE_PIN      28U
+#define NRF_IRQ_GPIO    GPIO1
+#define NRF_IRQ_PIN     22U
+
+/* --- COMMANDS & REGISTERS --- */
+#define CMD_R_REGISTER    0x00
+#define CMD_W_REGISTER    0x20
+#define CMD_R_RX_PAYLOAD  0x61
+#define CMD_FLUSH_RX      0xE2
+#define CMD_NOP           0xFF
+
+#define NRF_CONFIG      0x00
+#define NRF_EN_AA       0x01
+#define NRF_RF_CH       0x05
+#define NRF_RF_SETUP    0x06
+#define NRF_STATUS      0x07
+#define NRF_RX_PW_P0    0x11
+
+// Define the SPI Base Address - We are using LPSPI4 (MikroBus) to avoid conflict with Motors
+#define NRF_LPSPI_BASE          LPSPI4
+#define NRF_LPSPI_CLOCK_NAME    kCLOCK_LpFlexComm4 // FlexComm4 is LPSPI4
+#define NRF_LPSPI_PCS_FOR_INIT  kLPSPI_Pcs0
+#define NRF_LPSPI_PCS_FOR_XFER  kLPSPI_MasterPcs0
+
+// CE Pin (Chip Enable for RX/TX Mode) - Assign a free GPIO
+// Let's use P3_24 or similar if available, or P0_10 (LED Red) if debugging not needed.
+// For now, let's assume P1_8 (MikroBus INT/PWM or similar free pin).
+// Checking schematics... P2_5 is on MikroBus PWM.
+#define NRF_CE_GPIO             GPIO3
+#define NRF_CE_PIN              23U  // Using CS pin as manual CS if needed, or define dedicated CE.
+// Ideally CE is separate. Let's use P1_16 (MikroBus RX) if unused, or P2_5.
+// For simplicity in this example, I will map CE to P2_5 (MikroBus PWM pin).
+#define NRF_CE_PORT_PIN         5U
+#define NRF_CE_GPIO_PORT        GPIO2
+
+
+void NRF_Init_Rx(LPSPI_Type * spi_base);
+void NRF_WriteReg(LPSPI_Type * spi_base, uint8_t reg, uint8_t value);
+void NRF_Read_Payload(LPSPI_Type * spi_base, char *buffer);
+
+uint8_t SPI_Transfer(LPSPI_Type * spi_base, uint8_t data);
+
+
+#endif /* NRF_DRIVER_H_ */

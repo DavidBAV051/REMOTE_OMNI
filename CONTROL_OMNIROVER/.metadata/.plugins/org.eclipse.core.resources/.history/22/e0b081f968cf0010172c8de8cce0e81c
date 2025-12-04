@@ -1,0 +1,62 @@
+/* * RobotTelemetry.c
+ * Include necessary headers
+ */
+#include "RobotTelemetry.h"
+#include "ESP_SPI.h"
+#include "omnidriver.h" // Assuming this has MOTOR_T definitions
+#include "ADC_DRIVER.h"
+
+/* External references to your Global Motor Objects */
+extern MOTOR_T M1, M2, M3, M4;
+extern ADC_CONFIG_t adc_config_M1, adc_config_M2, adc_config_M3, adc_config_M4;
+
+/* Buffers for SPI Driver */
+static uint8_t telemetryTxBuffer[ESP_SPI_TRANSFER_SIZE];
+static uint8_t telemetryRxBuffer[ESP_SPI_TRANSFER_SIZE];
+static uint32_t packet_counter = 0;
+
+void Robot_SendTelemetry(void)
+{
+    /* 1. Check if previous transfer is done */
+    if (!ESP_SPI_IsTransferCompleted())
+    {
+        return; // Skip if busy
+    }
+
+    /* 2. Map the struct to the TX buffer */
+    RobotTelemetry_t *packet = (RobotTelemetry_t *)telemetryTxBuffer;
+
+    /* 3. Fill Header */
+    // You can use a specific ID in the top byte and counter in the lower bytes
+    packet->packet_header = (TELEMETRY_PACKET_ID << 24) | (packet_counter & 0x00FFFFFF);
+
+    /* 4. Fill Speed Data (from Global Motor Structs) */
+    packet->speed_m1 = M1.speed;
+    packet->speed_m2 = M2.speed;
+    packet->speed_m3 = M3.speed;
+    packet->speed_m4 = M4.speed;
+
+    /* 5. Fill ADC Data
+     * Note: We call read_ADC to get fresh values, or use .last_raw_value if updated elsewhere.
+     * Here we fetch fresh data using the driver prototypes.
+     */
+    packet->adc_m1 = (uint16_t)read_ADC(adc_config_M1.adc_base, adc_config_M1.commandId);
+    packet->adc_m2 = (uint16_t)read_ADC(adc_config_M2.adc_base, adc_config_M2.commandId);
+    packet->adc_m3 = (uint16_t)read_ADC(adc_config_M3.adc_base, adc_config_M3.commandId);
+    packet->adc_m4 = (uint16_t)read_ADC(adc_config_M4.adc_base, adc_config_M4.commandId);
+
+    // Store these back in the config struct if needed for other logic
+    adc_config_M1.last_raw_value = packet->adc_m1;
+    adc_config_M2.last_raw_value = packet->adc_m2;
+    adc_config_M3.last_raw_value = packet->adc_m3;
+    adc_config_M4.last_raw_value = packet->adc_m4;
+
+    /* 6. Fill Extra Data */
+    packet->timestamp = CTIMER_GetTimerCountValue(CTIMER0);
+    packet->reserved_flags = 0; // Populate with error flags or status bits later
+
+    /* 7. Start the Transfer */
+    ESP_SPI_StartTransfer(telemetryTxBuffer, telemetryRxBuffer);
+
+    packet_counter++;
+}

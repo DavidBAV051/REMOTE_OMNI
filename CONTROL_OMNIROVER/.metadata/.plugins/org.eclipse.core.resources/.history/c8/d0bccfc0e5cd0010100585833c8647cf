@@ -1,0 +1,139 @@
+/*
+ * NRF_DRIVER.c
+ *
+ *  Created on: Nov 29, 2025
+ *      Author: diego
+ */
+
+#include "NRF_DRIVER.h"
+
+/*******************************************************************************
+ * Low Level Functions
+ ******************************************************************************/
+void NRF_CSN_Low(void) { GPIO_PinWrite(NRF_CSN_GPIO, NRF_CSN_PIN, 0U); }
+void NRF_CSN_High(void) { GPIO_PinWrite(NRF_CSN_GPIO, NRF_CSN_PIN, 1U); }
+void NRF_CE_Low(void) { GPIO_PinWrite(NRF_CE_GPIO, NRF_CE_PIN, 0U); }
+void NRF_CE_High(void) { GPIO_PinWrite(NRF_CE_GPIO, NRF_CE_PIN, 1U); }
+
+
+uint8_t SPI_Transfer(LPSPI_Type * spi_base, uint8_t data)
+{
+    uint8_t rxData = 0;
+    lpspi_transfer_t masterXfer;
+    masterXfer.txData   = &data;
+    masterXfer.rxData   = &rxData;
+    masterXfer.dataSize = 1;
+    masterXfer.configFlags = kLPSPI_MasterPcsContinuous;
+    LPSPI_MasterTransferBlocking(spi_base, &masterXfer);
+    return rxData;
+}
+
+void NRF_WriteReg(LPSPI_Type * spi_base, uint8_t reg, uint8_t value)
+{
+    NRF_CSN_Low();
+    SPI_Transfer(spi_base, CMD_W_REGISTER | (reg & 0x1F));
+    SPI_Transfer(spi_base, value);
+    NRF_CSN_High();
+}
+
+/*******************************************************************************
+ * RX Logic
+ ******************************************************************************/
+
+void NRF_Init_Rx(LPSPI_Type * spi_base)
+{
+    NRF_CE_Low();
+
+    NRF_WriteReg(spi_base, NRF_RF_SETUP, 0x0E); // 1Mbps, 0dBm (Must match TX)
+    NRF_WriteReg(spi_base, NRF_RF_CH, 76);      // Channel 76
+
+    // IMPORTANT: Set payload size to 1 byte to match the sender
+    NRF_WriteReg(spi_base, NRF_RX_PW_P0, 1);
+
+    NRF_WriteReg(spi_base, NRF_EN_AA, 0x00);    // No Auto-Ack
+
+    /* CONFIG: PRIM_RX=1, PWR_UP=1 */
+    NRF_WriteReg(spi_base, NRF_CONFIG, 0x0F);
+
+    NRF_CSN_Low(); SPI_Transfer(spi_base, CMD_FLUSH_RX); NRF_CSN_High();
+    NRF_WriteReg(spi_base, NRF_STATUS, 0x70); // Clear interrupts
+
+    NRF_CE_High(); // Start Listening
+    for(volatile int i=0; i<10000; i++);
+}
+
+//void NRF_Read_Payload(LPSPI_Type * spi_base, char *buffer)
+//{
+//    NRF_CSN_Low();
+//    SPI_Transfer(spi_base, CMD_R_RX_PAYLOAD);
+//
+//    // Read ONLY 1 byte because TX sends only 1 byte
+//    buffer[0] = SPI_Transfer(spi_base, 0xFF);
+//
+//    NRF_CSN_High();
+//
+//    // Clear RX_DR Interrupt
+//    NRF_WriteReg(spi_base, NRF_STATUS, 0x40);
+//}
+
+void NRF_Read_Payload(LPSPI_Type * spi_base, char *buffer)
+{
+    uint8_t fifo_status;
+
+    /* Loop until RX FIFO is Empty */
+    do {
+        NRF_CSN_Low();
+        SPI_Transfer(spi_base, CMD_R_RX_PAYLOAD);
+
+        // Read 1 byte (as configured)
+        buffer[0] = SPI_Transfer(spi_base, 0xFF);
+
+        NRF_CSN_High();
+
+        /* Read FIFO_STATUS Register (0x17) */
+        NRF_CSN_Low();
+        SPI_Transfer(spi_base, CMD_R_REGISTER | NRF_FIFO_STATUS);
+        fifo_status = SPI_Transfer(spi_base, 0xFF);
+        NRF_CSN_High();
+
+        /* Bit 0 of FIFO_STATUS is RX_EMPTY.
+           If 0 (Not Empty), the loop continues and reads the next packet immediately. */
+
+    } while ((fifo_status & 0x01) == 0);
+
+    /* IMPROVEMENT: Clear ALL flags (0x70) to ensure IRQ line releases */
+    NRF_WriteReg(spi_base, NRF_STATUS, 0x70);
+}
+
+uint8_t NRF_Check_Status(LPSPI_Type* spi_base)
+{
+    uint8_t status = NRF_ReadReg(spi_base, NRF_STATUS);
+
+    // Bit 5 (TX_DS): Data Sent (Exito)
+    if (status & 0x20) {
+        // Limpiamos la bandera escribiendo 1 en el bit
+        NRF_WriteReg(spi_base, NRF_STATUS, 0x20);
+        return 1; // Enviado OK
+    }
+
+    // Bit 4 (MAX_RT): Max Retries (Fallo, nadie recibio el ACK)
+    if (status & 0x10) {
+        // Limpiamos la bandera
+        NRF_WriteReg(spi_base, NRF_STATUS, 0x10);
+        // Flush TX para eliminar el paquete atascado
+        NRF_CSN_Low(); SPI_Transfer(spi_base, CMD_FLUSH_RX); NRF_CSN_High();
+        return 2; // Error Max Retries
+    }
+
+    return 0; // Aun enviando...
+}
+
+uint8_t NRF_ReadReg(LPSPI_Type* spi_base, uint8_t reg)
+{
+    uint8_t val;
+    NRF_CSN_Low();
+    SPI_Transfer(spi_base, CMD_R_REGISTER | (reg & 0x1F));
+    val = SPI_Transfer(spi_base, CMD_NOP);
+    NRF_CSN_High();
+    return val;
+}

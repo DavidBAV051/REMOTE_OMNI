@@ -1,0 +1,647 @@
+/*
+ * Copyright 2016-2025 NXP
+ * All rights reserved.
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+
+/**
+ * @file    MCXN947_Project.c
+ * @brief   Application entry point.
+ */
+#include <stdio.h>
+#include <math.h>
+#include <stdbool.h>
+#include "fsl_vref.h"
+#include "fsl_spc.h"
+#include "fsl_ctimer.h"
+#include "GPIO_DRIVER.h"
+#include "PWM_DRIVER.h"
+#include "TIMER_DRIVER.h"
+#include "omnidriver.h"
+#include "ADC_DRIVER.h"
+#include "NRF_DRIVER.h"
+#include "fsl_debug_console.h"
+
+//*Definitions*/
+#define LPSPI_MASTER_CLK_FREQ CLOCK_GetLPFlexCommClkFreq(1u)
+#define EXAMPLE_LPSPI_MASTER_PCS_FOR_INIT     (kLPSPI_Pcs0)
+#define EXAMPLE_LPSPI_MASTER_PCS_FOR_TRANSFER (kLPSPI_MasterPcs0)
+
+#define CTIMER_FREQ_HZ          150000000U
+// The manufacturer specs for the output shaft
+#define OUTPUT_COUNTS_CPR       2249.0f
+// Math Constant
+#define PI                      3.14159265359f
+
+// Timeout Threshold: 0.2 seconds @ 150MHz
+// If no pulse is received for 0.2s, speed is set to 0.
+#define TIMEOUT_COUNTS          30000000U
+
+//*Variables*/
+uint32_t count = 0;
+float result = 0;
+
+// ***************************************************************
+// * GLOBAL VARIABLES FOR TIMEOUT TRACKING
+// ***************************************************************
+volatile uint32_t g_last_time_M1 = 0;
+volatile uint32_t g_last_time_M2 = 0;
+volatile uint32_t g_last_time_M3 = 0;
+volatile uint32_t g_last_time_M4 = 0;
+
+// ***************************************************************
+// * PIN DEFINITIONS
+// ***************************************************************
+
+// --- Motor 1 (PWM on kPWM_Module_0, kPWM_PwmB - P2_7) ---
+#define PIN_M1_ENA_A    19U // P0_19
+#define PORT_M1_ENA_A   0U
+#define PIN_M1_ENA_B    12U // P1_12
+#define PORT_M1_ENA_B   1U
+
+// --- Motor 2 (PWM on kPWM_Module_0, kPWM_PwmA - P2_6) ---
+#define PIN_M2_ENA_A    0U  // P1_0
+#define PORT_M2_ENA_A   1U
+#define PIN_M2_ENA_B    1U  // P1_1
+#define PORT_M2_ENA_B   1U
+
+// --- Motor 3 (PWM on kPWM_Module_1, kPWM_PwmA - P2_4) ---
+#define PIN_M3_ENA_A    16U // P1_16
+#define PORT_M3_ENA_A   1U
+#define PIN_M3_ENA_B    17U // P1_17
+#define PORT_M3_ENA_B   1U
+
+// --- Motor 4 (PWM on kPWM_Module_2, kPWM_PwmA - P2_2) ---
+#define PIN_M4_ENA_A    5U // P1_8
+#define PORT_M4_ENA_A   4U
+#define PIN_M4_ENA_B    7U // P0_7
+#define PORT_M4_ENA_B   0U
+
+// ***************************************************************
+// * ADC PIN DEFINITIONS (Using ADC0)
+// ***************************************************************
+// Motor 1 Current: P4_23 (ADC0 Channel 2 Side A)
+#define M1_ADC_PORT     4U
+#define M1_ADC_PIN      23U
+#define M1_ADC_CHANNEL  2U
+#define M1_ADC_CMD_ID   1U // Unique Command ID for this motor
+
+// Motor 2 Current: P0_16 (ADC0 Channel 8 Side A)
+#define M2_ADC_PORT     4U
+#define M2_ADC_PIN      15U
+#define M2_ADC_CHANNEL  1U
+#define M2_ADC_CMD_ID   2U
+
+// Motor 3 Current: P0_17 (ADC0 Channel 9 Side A)
+#define M3_ADC_PORT     4U
+#define M3_ADC_PIN      12U
+#define M3_ADC_CHANNEL  5U
+#define M3_ADC_CMD_ID   3U
+
+// Motor 4 Current: P0_18 (ADC0 Channel 10 Side A)
+#define M4_ADC_PORT     4U
+#define M4_ADC_PIN      16U
+#define M4_ADC_CHANNEL  6U
+#define M4_ADC_CMD_ID   4U
+
+// ***************************************************************
+// * ADC CONFIGURATION STRUCTS
+// ***************************************************************
+
+ADC_CONFIG_t adc_config_M1 = {
+    .adc_base = ADC0,
+	.spc_base = SPC0,
+	.vref_base = VREF0,
+    .mux_port = M1_ADC_PORT,
+    .mux_pin  = M1_ADC_PIN,
+    .channelNumber = M1_ADC_CHANNEL,
+    .commandId = M1_ADC_CMD_ID,
+    .last_raw_value = 0
+};
+
+ADC_CONFIG_t adc_config_M2 = {
+    .adc_base = ADC0,
+	.spc_base = SPC0,
+	.vref_base = VREF0,
+    .mux_port = M2_ADC_PORT,
+    .mux_pin  = M2_ADC_PIN,
+    .channelNumber = M2_ADC_CHANNEL,
+    .commandId = M2_ADC_CMD_ID,
+    .last_raw_value = 0
+};
+
+ADC_CONFIG_t adc_config_M3 = {
+    .adc_base = ADC0,
+	.spc_base = SPC0,
+	.vref_base = VREF0,
+    .mux_port = M3_ADC_PORT,
+    .mux_pin  = M3_ADC_PIN,
+    .channelNumber = M3_ADC_CHANNEL,
+    .commandId = M3_ADC_CMD_ID,
+    .last_raw_value = 0
+};
+
+ADC_CONFIG_t adc_config_M4 = {
+    .adc_base = ADC0,
+	.spc_base = SPC0,
+	.vref_base = VREF0,
+    .mux_port = M4_ADC_PORT,
+    .mux_pin  = M4_ADC_PIN,
+    .channelNumber = M4_ADC_CHANNEL,
+    .commandId = M4_ADC_CMD_ID,
+    .last_raw_value = 0
+};
+
+// ***************************************************************
+// * GPIO ENABLE PIN STRUCTS (for readability/portability)
+// ***************************************************************
+
+ENABLE_PIN M1_ENA_A = { .PORT = PORT_M1_ENA_A,
+						.PIN = PIN_M1_ENA_A };
+ENABLE_PIN M1_ENA_B = { .PORT = PORT_M1_ENA_B,
+						.PIN = PIN_M1_ENA_B };
+
+ENABLE_PIN M2_ENA_A = { .PORT = PORT_M2_ENA_A,
+						.PIN = PIN_M2_ENA_A };
+ENABLE_PIN M2_ENA_B = { .PORT = PORT_M2_ENA_B,
+						.PIN = PIN_M2_ENA_B };
+
+ENABLE_PIN M3_ENA_A = { .PORT = PORT_M3_ENA_A,
+						.PIN = PIN_M3_ENA_A };
+ENABLE_PIN M3_ENA_B = { .PORT = PORT_M3_ENA_B,
+						.PIN = PIN_M3_ENA_B };
+
+ENABLE_PIN M4_ENA_A = { .PORT = PORT_M4_ENA_A,
+						.PIN = PIN_M4_ENA_A };
+ENABLE_PIN M4_ENA_B = { .PORT = PORT_M4_ENA_B,
+						.PIN = PIN_M4_ENA_B };
+
+// ***************************************************************
+// * PWM Control Structures (one per channel)
+// ***************************************************************
+
+PWM_CTRL_t pwm_ctrl_M1 = {.pwm_base = PWM1,
+						  .submodule = kPWM_Module_3,
+						  .channel = kPWM_PwmA,
+						  .pwm_mode = kPWM_SignedCenterAligned };
+
+PWM_CTRL_t pwm_ctrl_M2 = {.pwm_base = PWM1,
+						  .submodule = kPWM_Module_0,
+						  .channel = kPWM_PwmA,
+						  .pwm_mode = kPWM_SignedCenterAligned };
+
+PWM_CTRL_t pwm_ctrl_M3 = {.pwm_base = PWM1,
+		                  .submodule = kPWM_Module_1,
+						  .channel = kPWM_PwmA,
+						  .pwm_mode = kPWM_SignedCenterAligned };
+
+PWM_CTRL_t pwm_ctrl_M4 = {.pwm_base = PWM1,
+		                  .submodule = kPWM_Module_2,
+						  .channel = kPWM_PwmA,
+						  .pwm_mode = kPWM_SignedCenterAligned };
+
+
+// ***************************************************************
+// * PID STRUCTURES (4 Motors)
+// ***************************************************************
+
+PID_CONFIG PID1 = {
+		.Kp = 35000,
+		.Ki = 20000,
+		.Kd = 0.1,
+	    .previous_err1 = 0, // e(k)
+	    .previous_err2 = 0, // e(k-1)
+	    .integral_err  = 0,  // Sum of error
+	    .last_output   = 0,  // PID output in last control period
+	    .max_integral  = MAX_PWM_DEFINITION, // PID maximum integral value limitation
+	    .min_integral  = -MAX_PWM_DEFINITION // PID minimum integral value limitation
+};
+
+PID_CONFIG PID2 = {
+		.Kp = 35000,
+		.Ki = 20000,
+		.Kd = 0.1,
+	    .previous_err1 = 0, // e(k)
+	    .previous_err2 = 0, // e(k-1)
+	    .integral_err  = 0,  // Sum of error
+	    .last_output   = 0,  // PID output in last control period
+	    .max_integral  = MAX_PWM_DEFINITION, // PID maximum integral value limitation
+	    .min_integral  = -MAX_PWM_DEFINITION // PID minimum integral value limitation
+};
+
+PID_CONFIG PID3 = {
+		.Kp = 35000,
+		.Ki = 20000,
+		.Kd = 0.1,
+	    .previous_err1 = 0, // e(k)
+	    .previous_err2 = 0, // e(k-1)
+	    .integral_err  = 0,  // Sum of error
+	    .last_output   = 0,  // PID output in last control period
+	    .max_integral  = MAX_PWM_DEFINITION, // PID maximum integral value limitation
+	    .min_integral  = -MAX_PWM_DEFINITION // PID minimum integral value limitation
+};
+
+PID_CONFIG PID4 = {
+		.Kp = 35000,
+		.Ki = 20000,
+		.Kd = 0.1,
+	    .previous_err1 = 0, // e(k)
+	    .previous_err2 = 0, // e(k-1)
+	    .integral_err  = 0,  // Sum of error
+	    .last_output   = 0,  // PID output in last control period
+	    .max_integral  = MAX_PWM_DEFINITION, // PID maximum integral value limitation
+	    .min_integral  = -MAX_PWM_DEFINITION // PID minimum integral value limitation
+};
+
+// ***************************************************************
+// * MOTOR TOP-LEVEL STRUCTS (Updated)
+// ***************************************************************
+
+MOTOR_T M1 = {
+    .MINA = &M1_ENA_A,
+    .MINB = &M1_ENA_B,
+    .PWM  = &pwm_ctrl_M1,
+    .ADC  = &adc_config_M1,
+    .PID  = &PID1,
+	.direction = MOTOR_FORWARD,
+	.target = 0
+};
+
+MOTOR_T M2 = {
+    .MINA = &M2_ENA_A,
+    .MINB = &M2_ENA_B,
+    .PWM = &pwm_ctrl_M2,
+    .ADC = &adc_config_M2,
+	.PID  = &PID2,
+	.direction = MOTOR_FORWARD,
+	.target = 0
+};
+
+MOTOR_T M3 = {
+    .MINA = &M3_ENA_A,
+    .MINB = &M3_ENA_B,
+    .PWM = &pwm_ctrl_M3,
+    .ADC = &adc_config_M3,
+	.PID  = &PID3,
+	.direction = MOTOR_FORWARD,
+	.target = 0
+};
+
+MOTOR_T M4 = {
+    .MINA = &M4_ENA_A,
+    .MINB = &M4_ENA_B,
+    .PWM = &pwm_ctrl_M4,
+    .ADC = &adc_config_M4,
+	.PID  = &PID4,
+	.direction = MOTOR_FORWARD,
+	.target = 0
+};
+
+
+ROBOT_T ROBOT = {
+	.vx = 0.0,
+	.vy = 0.1,
+	.phi = 0,
+	.M1 = &M1,
+	.M2 = &M2,
+	.M3 = &M3,
+	.M4 = &M4
+};
+
+//*Prototypes*/
+void init_hardware(void);
+float counts_to_rad_s(uint32_t period_counts);
+float counts_to_hertz(uint32_t period_counts);
+float counts_to_rps(uint32_t period_counts);
+void check_stopped_motors(void);
+float rad_s_to_counts(float rads);
+
+//ROBOT FUNCTIONS
+float dimension_rotation(uint8_t raw_byte);
+float dimension_speed(uint8_t raw_byte);
+
+//CALLBACKS
+
+void TIMER_0(void){
+
+
+
+}
+
+void PID_TIMER(void){
+
+	check_stopped_motors();
+	ROBOT_compute_kinematics(&ROBOT);
+	pid_compute(&M1);
+	pid_compute(&M2);
+	pid_compute(&M3);
+	pid_compute(&M4);
+}
+
+void ctimer_capture_callback(uint32_t flags)
+{
+    // --- MOTOR 1 (Channel 0) ---
+    if ((flags & kCTIMER_Capture0Flag) != 0U)
+    {
+        static uint32_t prev0 = 0;
+        uint32_t curr0 = CTIMER_GetCaptureValue(CTIMER0, kCTIMER_Capture_0);
+
+        // Save timestamp for timeout logic
+        g_last_time_M1 = curr0;
+
+        M1.speed = counts_to_rad_s(curr0 - prev0);
+        prev0 = curr0;
+    }
+
+    // --- MOTOR 2 (Channel 1) ---
+    if ((flags & kCTIMER_Capture1Flag) != 0U)
+    {
+        static uint32_t prev1 = 0;
+        uint32_t curr1 = CTIMER_GetCaptureValue(CTIMER0, kCTIMER_Capture_1);
+
+        g_last_time_M2 = curr1;
+
+        M2.speed = counts_to_rad_s((curr1 - prev1));
+        prev1 = curr1;
+    }
+
+    // --- MOTOR 3 (Channel 2) ---
+    if ((flags & kCTIMER_Capture2Flag) != 0U)
+    {
+        static uint32_t prev2 = 0;
+        uint32_t curr2 = CTIMER_GetCaptureValue(CTIMER0, kCTIMER_Capture_2);
+
+        g_last_time_M3 = curr2;
+
+        M3.speed = counts_to_rad_s((curr2 - prev2));
+        prev2 = curr2;
+    }
+
+    // --- MOTOR 4 (Channel 3) ---
+    if ((flags & kCTIMER_Capture3Flag) != 0U)
+    {
+        static uint32_t prev3 = 0;
+        uint32_t curr3 = CTIMER_GetCaptureValue(CTIMER0, kCTIMER_Capture_3);
+
+        g_last_time_M4 = curr3;
+
+        M4.speed = counts_to_rad_s((curr3 - prev3));
+        prev3 = curr3;
+    }
+}
+
+
+
+/*
+ * @brief   Generate 4 PWM signals.
+ */
+
+int main(void)
+{
+	init_hardware();
+    /* Structure of initialize PWM */
+    init_pwm();
+
+	init_LPTMR_12MHz(LPTMR0, 1000000);
+	lptmr_attach_callback(LPTMR0, TIMER_0);
+
+	init_LPTMR_12MHz(LPTMR1, PID_TIMER_TICKS);
+	lptmr_attach_callback(LPTMR1, PID_TIMER);
+
+
+	//CTIMER
+	ctimer_config_t config;
+	CTIMER_GetDefaultConfig(&config);
+	CTIMER_Init(CTIMER0, &config);
+
+	// Array to hold the single callback function pointer
+	ctimer_callback_t ctimer_callbacks[] = {ctimer_capture_callback};
+	// Register the callback function
+	CTIMER_RegisterCallBack(CTIMER0, ctimer_callbacks, kCTIMER_SingleCallback);
+
+	// Setup Capture for ALL 4 Channels
+	// Motor 1
+	CTIMER_SetupCapture(CTIMER0, kCTIMER_Capture_0, kCTIMER_Capture_BothEdge, true);
+	// Motor 2
+	CTIMER_SetupCapture(CTIMER0, kCTIMER_Capture_1, kCTIMER_Capture_BothEdge, true);
+	// Motor 3
+	CTIMER_SetupCapture(CTIMER0, kCTIMER_Capture_2, kCTIMER_Capture_BothEdge, true);
+	// Motor 4
+	CTIMER_SetupCapture(CTIMER0, kCTIMER_Capture_3, kCTIMER_Capture_BothEdge, true);
+
+	// Start the timer
+	CTIMER_StartTimer(CTIMER0);
+
+	//MOTOR 1
+	MOTOR_init(&M1);
+    //MOTOR 2
+	MOTOR_init(&M2);
+	//MOTOR 3
+	MOTOR_init(&M3);
+	//MOTOR 3
+	MOTOR_init(&M4);
+
+	LPTMR_StartTimer(LPTMR0);
+	LPTMR_StartTimer(LPTMR1); //PID_TIMER
+
+	//Init pins for SPI
+	/* GPIO Init */
+	gpio_pin_config_t out_config = {kGPIO_DigitalOutput, 1};
+	GPIO_PinInit(NRF_CSN_GPIO, NRF_CSN_PIN, &out_config);
+	GPIO_PinInit(NRF_CE_GPIO, NRF_CE_PIN, &out_config);
+
+	gpio_pin_config_t in_config = {kGPIO_DigitalInput, 0};
+	GPIO_PinInit(NRF_IRQ_GPIO, NRF_IRQ_PIN, &in_config);
+
+	/* SPI Init */
+	lpspi_master_config_t masterConfig;
+	LPSPI_MasterGetDefaultConfig(&masterConfig);
+	masterConfig.baudRate = 8000000U;
+	masterConfig.cpol = kLPSPI_ClockPolarityActiveHigh;
+	masterConfig.cpha = kLPSPI_ClockPhaseFirstEdge;
+	LPSPI_MasterInit(LPSPI1, &masterConfig, LPSPI_MASTER_CLK_FREQ);
+
+
+	while (1U)
+	{
+
+	}
+}
+
+
+void init_hardware(void){
+
+	vref_config_t vrefConfig; //HARDWARE
+	CLOCK_EnableClock(kCLOCK_InputMux);
+
+	/* attach FRO 12M to FLEXCOMM4 (debug console) */
+	CLOCK_SetClkDiv(kCLOCK_DivFlexcom4Clk, 1u);
+	CLOCK_AttachClk(BOARD_DEBUG_UART_CLK_ATTACH);
+
+	/* attach FRO 12M to FLEXCOMM1 */
+	CLOCK_SetClkDiv(kCLOCK_DivFlexcom1Clk, 1u);
+	CLOCK_AttachClk(kFRO12M_to_FLEXCOMM1);
+
+	CLOCK_SetClkDiv(kCLOCK_DivAdc0Clk, 1U);
+	CLOCK_AttachClk(kFRO_HF_to_ADC0);
+
+	/* Use FRO HF clock for CTIMER0 */
+	CLOCK_AttachClk(kPLL0_to_CTIMER0);
+	CLOCK_SetClkDiv(kCLOCK_DivCtimer0Clk, 1U);
+
+	CLOCK_EnableClock(kCLOCK_Port0);
+	CLOCK_EnableClock(kCLOCK_Gpio0);
+
+	CLOCK_EnableClock(kCLOCK_Port1);
+	CLOCK_EnableClock(kCLOCK_Gpio1);
+
+	CLOCK_EnableClock(kCLOCK_Port2);
+	CLOCK_EnableClock(kCLOCK_Gpio2);
+
+	CLOCK_EnableClock(kCLOCK_Port3);
+	CLOCK_EnableClock(kCLOCK_Gpio3);
+
+	CLOCK_EnableClock(kCLOCK_Port4);
+	CLOCK_EnableClock(kCLOCK_Gpio4);
+
+    /* enable and VREF. */
+    SPC_EnableActiveModeAnalogModules(SPC0, (kSPC_controlVref));
+
+    VREF_GetDefaultConfig(&vrefConfig);
+	/* Initialize the VREF mode. */
+	VREF_Init(VREF0, &vrefConfig);
+
+	BOARD_InitBootPins();
+	BOARD_InitBootClocks();
+	BOARD_InitDebugConsole();
+
+	INPUTMUX->CTIMER0CAP0 = INPUTMUX_CTIMER0CAP0_INP(16U); // M1 (P4_0) -> Cap 16
+	INPUTMUX->CTIMER0CAP1 = INPUTMUX_CTIMER0CAP1_INP(17U); // M2 (P4_1) -> Cap 17
+	INPUTMUX->CTIMER0CAP2 = INPUTMUX_CTIMER0CAP2_INP(0U);  // M3 (P0_8)-> Cap 0
+	INPUTMUX->CTIMER0CAP3 = INPUTMUX_CTIMER0CAP3_INP(1U);  // M4 (P0_9)-> Cap 1
+
+	/* Enable PWM1 SUB Clockn */
+	SYSCON->PWM1SUBCTL |=
+		(SYSCON_PWM1SUBCTL_CLK0_EN_MASK | SYSCON_PWM1SUBCTL_CLK1_EN_MASK | SYSCON_PWM1SUBCTL_CLK2_EN_MASK);
+
+}
+
+/**
+ * @brief Processes a raw byte (0-100), ignores the last 2 bits,
+ * and scales it to a float between -1.0 and 1.0.
+ */
+float dimension_speed(uint8_t raw_byte)
+{
+    // 1. Mask the last two bits (0xFC is 1111 1100 in binary)
+    // This effectively rounds the number down to the nearest multiple of 4.
+    uint8_t val = (raw_byte & 0xFC);
+
+    // 2. Scale the value
+    // We cast to float to prevent integer division truncation.
+    // Formula: (Value / 50.0) - 1.0
+    float scaled_result = ((float)val / 50.0f) - 1.0f;
+
+    // Optional: Safety clamp
+    // Since uint8_t can theoretically go up to 255, if the input
+    // accidentally exceeds 100, the result would exceed 1.0.
+    if (scaled_result > 1.0f) {
+        scaled_result = 1.0f;
+    }
+
+    return scaled_result;
+}
+
+/**
+ * @brief Processes a raw byte (0-100), ignores the last 2 bits,
+ * and scales it to a float between -0.01 and 0.01.
+ */
+float dimension_rotation(uint8_t raw_byte)
+{
+    // 1. Mask the last two bits (0xFC)
+    // Rounds down to the nearest multiple of 4
+    uint8_t val = (raw_byte & 0xFC);
+
+    // 2. Scale the value
+    // Formula: (Value / 5000.0) - 0.01
+    // Range [0, 100] becomes [-0.01, 0.01]
+    float scaled_result = ((float)val / 5000.0f) - 0.01f;
+
+    // Optional: Safety clamp
+    // Ensures we don't exceed 0.01 if input > 100
+    if (scaled_result > 0.01f) {
+        scaled_result = 0.01f;
+    }
+
+    return scaled_result;
+}
+
+float counts_to_hertz(uint32_t period_counts)
+{
+    if (period_counts < 100) return 0.0f;
+
+    // F_timer / period_counts gives Interrupt Frequency.
+    // Divide by 2 because we capture both Rising and Falling edges (2 interrupts = 1 full pulse)
+    return (float)CTIMER_FREQ_HZ / ((float)period_counts * 2.0f);
+}
+
+// Calculates the Speed of the WHEEL (Output Shaft)
+float counts_to_rad_s(uint32_t period_counts)
+{
+    if (period_counts < 100) return 0.0f;
+
+    // 1. Get Pulse Frequency
+    float pulse_hz = counts_to_hertz(period_counts);
+
+    // 2. Convert Pulse Hz to Output Revolutions Per Second (RPS)
+    // We divide by (OUTPUT_COUNTS_CPR / 2) because 2249 is the quadrature count (4 edges),
+    // but we are only measuring 1 channel (2 edges).
+    float wheel_rps = pulse_hz / (OUTPUT_COUNTS_CPR / 2.0f);
+
+    // 3. Convert RPS to Rad/s
+    return wheel_rps * 2.0f * PI;
+}
+
+float rad_s_to_counts(float rads)
+{
+    if (rads < 100) return 0.0f;
+
+    float freq_hz;
+    float period;
+    freq_hz = (OUTPUT_COUNTS_CPR / 2.0f) * rads / 2*PI;
+    period = 1.0f / freq_hz;
+    return (1.0f/CTIMER_FREQ_HZ)/period;
+
+}
+
+float counts_to_rps(uint32_t period_counts)
+{
+    if (period_counts < 100) return 0.0f;
+
+    float pulse_hz = counts_to_hertz(period_counts);
+
+    // We capture 2 edges (Rise/Fall of Ch A).
+    // The Spec (2249) is for 4 edges (Rise/Fall of Ch A + Ch B).
+    // So we divide the spec by 2.
+    float edges_per_rev = OUTPUT_COUNTS_CPR / 2.0f;
+
+    return pulse_hz / edges_per_rev;
+}
+
+void check_stopped_motors(void)
+{
+    uint32_t now = CTIMER_GetTimerCountValue(CTIMER0);
+
+    // If time since last interrupt > threshold, assume speed is 0
+    // Casting M1.speed to float(0) or setting a flag
+    if ((now - g_last_time_M1) > TIMEOUT_COUNTS) M1.speed = 0.0f;
+    if ((now - g_last_time_M2) > TIMEOUT_COUNTS) M2.speed = 0.0f;
+    if ((now - g_last_time_M3) > TIMEOUT_COUNTS) M3.speed = 0.0f;
+    if ((now - g_last_time_M4) > TIMEOUT_COUNTS) M4.speed = 0.0f;
+}
+
+
+
+
+
+

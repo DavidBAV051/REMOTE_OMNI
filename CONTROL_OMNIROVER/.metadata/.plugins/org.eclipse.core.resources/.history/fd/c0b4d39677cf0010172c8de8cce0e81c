@@ -1,0 +1,61 @@
+/* RobotTelemetry.c */
+#include "RobotTelemetry.h"
+#include "ESP_SPI.h"
+#include "omnidriver.h"
+#include "ADC_DRIVER.h"
+
+/* External references to your Global Motor Objects (defined in MCXN947_Project.c) */
+extern MOTOR_T M1, M2, M3, M4;
+extern ADC_CONFIG_t adc_config_M1, adc_config_M2, adc_config_M3, adc_config_M4;
+
+/* Buffers for SPI Driver */
+static uint8_t telemetryTxBuffer[ESP_SPI_TRANSFER_SIZE];
+static uint8_t telemetryRxBuffer[ESP_SPI_TRANSFER_SIZE];
+
+static uint32_t packet_counter = 0;
+static uint32_t software_tick = 0;
+
+void Robot_SendTelemetry(void)
+{
+    /* Increment internal timebase since this is called from a Timer ISR */
+    software_tick++;
+
+    /* 1. Check if SPI is busy. If so, skip this cycle to avoid collision. */
+    if (!ESP_SPI_IsTransferCompleted())
+    {
+        return;
+    }
+
+    /* 2. Map buffer to struct */
+    RobotTelemetry_t *packet = (RobotTelemetry_t *)telemetryTxBuffer;
+
+    /* 3. Header Construction */
+    packet->packet_header = (TELEMETRY_PACKET_ID << 24) | (packet_counter & 0x00FFFFFF);
+
+    /* 4. Fill Speed Data */
+    packet->speed_m1 = M1.speed;
+    packet->speed_m2 = M2.speed;
+    packet->speed_m3 = M3.speed;
+    packet->speed_m4 = M4.speed;
+
+    /* 5. Fill ADC Data (Read fresh values) */
+    packet->adc_m1 = (uint16_t)read_ADC(adc_config_M1.adc_base, adc_config_M1.commandId);
+    packet->adc_m2 = (uint16_t)read_ADC(adc_config_M2.adc_base, adc_config_M2.commandId);
+    packet->adc_m3 = (uint16_t)read_ADC(adc_config_M3.adc_base, adc_config_M3.commandId);
+    packet->adc_m4 = (uint16_t)read_ADC(adc_config_M4.adc_base, adc_config_M4.commandId);
+
+    /* Update local structs if needed */
+    adc_config_M1.last_raw_value = packet->adc_m1;
+    adc_config_M2.last_raw_value = packet->adc_m2;
+    adc_config_M3.last_raw_value = packet->adc_m3;
+    adc_config_M4.last_raw_value = packet->adc_m4;
+
+    /* 6. Fill Timestamp/Flags (Independent of CTIMER) */
+    packet->timestamp = software_tick;
+    packet->reserved_flags = 0;
+
+    /* 7. Start DMA/Interrupt Transfer */
+    ESP_SPI_StartTransfer(telemetryTxBuffer, telemetryRxBuffer);
+
+    packet_counter++;
+}

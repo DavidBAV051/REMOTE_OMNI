@@ -1,0 +1,27 @@
+!SESSION 2025-11-24 16:39:20.679 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 1 0 2025-11-24 16:40:33.858
+!MESSAGE Recreating part support. No part support available.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 1 0 2025-11-24 16:40:43.485
+!MESSAGE The device 'MCXN947' (version='1.0.0') from SDK 'SDK_2.x_FRDM-MCXN947' (version='25.03.00', build='881 2025-03-28') will be installed.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 1 0 2025-11-24 16:40:45.349
+!MESSAGE The device 'LPC865' (version='1.0.0') from SDK 'SDK_2.x_LPCXpresso860MAX' (version='24.12.00', build='epluginsite812 2025-01-14') will be installed.
+!SESSION 2025-11-24 18:49:20.068 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 1 0 2025-11-24 18:50:34.346
+!MESSAGE The device 'MCXN947' (version='1.0.0') from SDK 'SDK_2.x_FRDM-MCXN947' (version='25.03.00', build='881 2025-03-28') will be installed.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 1 0 2025-11-24 18:50:35.221
+!MESSAGE The device 'LPC865' (version='1.0.0') from SDK 'SDK_2.x_LPCXpresso860MAX' (version='24.12.00', build='epluginsite812 2025-01-14') will be installed.

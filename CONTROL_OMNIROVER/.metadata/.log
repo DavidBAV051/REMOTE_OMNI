@@ -1,0 +1,1740 @@
+!SESSION 2025-11-25 20:32:48.776 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+This is a continuation of log file C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\.metadata\.bak_0.log
+Created Time: 2025-11-25 20:42:25.315
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-11-25 20:42:25.315
+!MESSAGE Indexed 'MCXN947_Project' (37 sources, 140 headers) in 6.84 sec: 13,498 declarations; 42,278 references; 0 unresolved inclusions; 0 syntax errors; 263 unresolved names (0.47%)
+
+!ENTRY com.crt.utils 1 0 2025-11-25 20:44:15.865
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-25 20:44:16.427
+!MESSAGE Telnet session connected on port 2333->55862 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-25 20:45:50.028
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-25 20:45:50.724
+!MESSAGE Telnet session connected on port 2333->56825 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-25 20:47:45.933
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-25 20:47:46.648
+!MESSAGE Telnet session connected on port 2333->57769 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-25 20:48:39.751
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-25 20:48:40.452
+!MESSAGE Telnet session connected on port 2333->58708 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-11-25 20:53:37.930
+!MESSAGE Indexed 'frdmmcxn947_lpspi_edma_b2b_transfer_master_cm33_core0' (25 sources, 124 headers) in 2.03 sec: 15,693 declarations; 39,329 references; 14 unresolved inclusions; 203 syntax errors; 5,382 unresolved names (8.9%)
+
+!ENTRY MCUXpresso IDE 4 -1 2025-11-26 12:26:06.029
+!MESSAGE The SDK 'SDK_2.x_FRDM-MCXN947' ('25.6.000') for project 'ADC_FOR_Joysticks_lpadc_interrupt_cm33_core0' can not be found!
+Version '25.03.00' will be used!
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-11-26 12:26:08.332
+!MESSAGE Indexed 'ADC_FOR_Joysticks_lpadc_interrupt_cm33_core0' (24 sources, 126 headers) in 1.53 sec: 14,560 declarations; 37,944 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.crt.utils 1 0 2025-11-26 12:45:06.633
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-26 12:45:07.367
+!MESSAGE Telnet session connected on port 2333->56432 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-26 12:46:00.247
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-26 12:46:00.982
+!MESSAGE Telnet session connected on port 2333->57193 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2025-11-26 12:49:32.700
+!MESSAGE There is already a running debug session for the launch configuration 'MCXN947_Project JLink Debug'.
+
+!ENTRY com.crt.utils 1 0 2025-11-26 12:49:39.313
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-26 12:49:40.044
+!MESSAGE Telnet session connected on port 2333->62356 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-26 12:52:52.056
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-26 12:52:52.791
+!MESSAGE Telnet session connected on port 2333->55695 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-26 12:53:26.696
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-26 12:53:27.404
+!MESSAGE Telnet session connected on port 2333->56660 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-26 12:58:34.835
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-26 12:58:35.565
+!MESSAGE Telnet session connected on port 2333->64935 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-26 13:04:59.886
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-26 13:05:00.618
+!MESSAGE Telnet session connected on port 2333->53630 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-26 13:11:09.759
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-26 13:11:10.501
+!MESSAGE Telnet session connected on port 2333->62801 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-26 13:32:19.371
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-26 13:32:20.092
+!MESSAGE Telnet session connected on port 2333->64108 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-26 14:08:56.944
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-26 14:08:57.605
+!MESSAGE Telnet session connected on port 2333->52198 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2025-11-26 14:14:18.892
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb.ui 4 0 2025-11-26 14:14:18.892
+!MESSAGE Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@6182c16a[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@732a2bc7[Wrapped task = org.eclipse.cdt.dsf.gdb.internal.ui.actions.GdbDisconnectCommand$4@63d11a38]] rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@37a7407a[Shutting down, pool size = 1, active threads = 0, queued tasks = 7, completed tasks = 9310]
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2025-11-26 14:14:18.892
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.GdbDisconnectCommand$1@7e9ae916): Status ERROR: org.eclipse.cdt.dsf.gdb.ui code=0 Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@6182c16a[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@732a2bc7[Wrapped task = org.eclipse.cdt.dsf.gdb.internal.ui.actions.GdbDisconnectCommand$4@63d11a38]] rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@37a7407a[Shutting down, pool size = 1, active threads = 0, queued tasks = 7, completed tasks = 9310]' resulted in a rejected execution exception.
+
+!ENTRY com.crt.utils 1 0 2025-11-26 14:14:23.059
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-26 14:14:23.708
+!MESSAGE Telnet session connected on port 2333->64740 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-26 14:15:47.183
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-26 14:15:47.852
+!MESSAGE Telnet session connected on port 2333->49321 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-26 14:21:44.855
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-26 14:21:45.526
+!MESSAGE Telnet session connected on port 2333->50542 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2025-11-26 14:27:34.855
+!MESSAGE There is already a running debug session for the launch configuration 'MCXN947_Project JLink Debug'.
+
+!ENTRY com.crt.utils 1 0 2025-11-26 14:27:42.679
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-26 14:27:43.411
+!MESSAGE Telnet session connected on port 2333->65091 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-26 14:31:05.627
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-26 14:31:06.272
+!MESSAGE Telnet session connected on port 2333->50478 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2025-11-26 14:32:43.578
+!MESSAGE There is already a running debug session for the launch configuration 'MCXN947_Project JLink Debug'.
+
+!ENTRY com.crt.utils 1 0 2025-11-26 14:32:52.061
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-26 14:32:52.797
+!MESSAGE Telnet session connected on port 2333->51440 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2025-11-26 14:41:47.456
+!MESSAGE There is already a running debug session for the launch configuration 'MCXN947_Project JLink Debug'.
+
+!ENTRY com.crt.utils 1 0 2025-11-26 14:41:55.545
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-26 14:41:56.216
+!MESSAGE Telnet session connected on port 2333->52652 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-26 14:44:57.508
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-26 14:44:58.075
+!MESSAGE Telnet session connected on port 2333->55325 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-26 14:45:19.597
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-26 14:45:20.337
+!MESSAGE Telnet session connected on port 2333->56272 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-26 14:46:17.034
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-26 14:46:17.765
+!MESSAGE Telnet session connected on port 2333->57222 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-26 14:58:25.231
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-26 14:58:25.894
+!MESSAGE Telnet session connected on port 2333->62365 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-26 15:16:49.517
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-26 15:16:50.195
+!MESSAGE Telnet session connected on port 2333->49894 @ 127.0.0.1
+!SESSION 2025-11-29 01:32:41.152 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2025-11-29 01:32:56.520
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY MCUXpresso IDE 4 -1 2025-11-29 01:33:08.258
+!MESSAGE The SDK 'SDK_2.x_FRDM-MCXN947' ('25.6.000') for project 'ADC_FOR_Joysticks_lpadc_interrupt_cm33_core0' can not be found!
+Version '25.03.00' will be used!
+
+!ENTRY com.crt.utils 1 0 2025-11-29 18:47:18.073
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 18:47:18.747
+!MESSAGE Telnet session connected on port 2333->59051 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 19:59:49.325
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 19:59:50.062
+!MESSAGE Telnet session connected on port 2333->58594 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 20:07:31.370
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 20:07:32.082
+!MESSAGE Telnet session connected on port 2333->59578 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 20:30:36.444
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 20:30:37.181
+!MESSAGE Telnet session connected on port 2333->64553 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 20:33:21.492
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 20:33:22.186
+!MESSAGE Telnet session connected on port 2333->65526 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 20:35:33.049
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 20:35:33.776
+!MESSAGE Telnet session connected on port 2333->50437 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 21:29:46.662
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 21:29:47.359
+!MESSAGE Telnet session connected on port 2333->61200 @ 127.0.0.1
+
+!ENTRY com.crt.log 4 -1 2025-11-29 21:32:54.958
+!MESSAGE Program file does not exist
+!STACK 0
+java.lang.Exception: org.eclipse.core.runtime.CoreException: Program file does not exist
+	at com.crt.utils.general.Reporter.log(Reporter.java:592)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager$2.run(SymbolWrapper.java:130)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Program file does not exist
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.abort(LaunchUtils.java:195)
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:129)
+	at com.crt.utils.general.SymbolWrapper.getGlobals(SymbolWrapper.java:407)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager.getSymbols(SymbolWrapper.java:183)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager$2.run(SymbolWrapper.java:128)
+	... 1 more
+Caused by: java.io.FileNotFoundException: C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\Debug\MCXN947_Project.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	... 4 more
+
+!ENTRY com.crt.utils 1 0 2025-11-29 21:32:58.351
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 21:32:59.082
+!MESSAGE Telnet session connected on port 2333->61145 @ 127.0.0.1
+
+!ENTRY com.crt.log 4 -1 2025-11-29 21:33:45.503
+!MESSAGE Program file does not exist
+!STACK 0
+java.lang.Exception: org.eclipse.core.runtime.CoreException: Program file does not exist
+	at com.crt.utils.general.Reporter.log(Reporter.java:592)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager$2.run(SymbolWrapper.java:130)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Program file does not exist
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.abort(LaunchUtils.java:195)
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:129)
+	at com.crt.utils.general.SymbolWrapper.getGlobals(SymbolWrapper.java:407)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager.getSymbols(SymbolWrapper.java:183)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager$2.run(SymbolWrapper.java:128)
+	... 1 more
+Caused by: java.io.FileNotFoundException: C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\Debug\MCXN947_Project.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	... 4 more
+
+!ENTRY com.crt.log 4 -1 2025-11-29 21:33:56.879
+!MESSAGE Program file does not exist
+!STACK 0
+java.lang.Exception: org.eclipse.core.runtime.CoreException: Program file does not exist
+	at com.crt.utils.general.Reporter.log(Reporter.java:592)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager$2.run(SymbolWrapper.java:130)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Program file does not exist
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.abort(LaunchUtils.java:195)
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:129)
+	at com.crt.utils.general.SymbolWrapper.getGlobals(SymbolWrapper.java:407)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager.getSymbols(SymbolWrapper.java:183)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager$2.run(SymbolWrapper.java:128)
+	... 1 more
+Caused by: java.io.FileNotFoundException: C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\Debug\MCXN947_Project.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	... 4 more
+
+!ENTRY com.crt.utils 1 0 2025-11-29 21:34:00.204
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 21:34:00.953
+!MESSAGE Telnet session connected on port 2333->62081 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 21:36:45.609
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 21:36:46.344
+!MESSAGE Telnet session connected on port 2333->65330 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 21:40:51.108
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 21:40:51.849
+!MESSAGE Telnet session connected on port 2333->52058 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 22:10:42.923
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 22:10:43.667
+!MESSAGE Telnet session connected on port 2333->64922 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 22:14:08.901
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 22:14:09.609
+!MESSAGE Telnet session connected on port 2333->65477 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 22:18:32.532
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 22:18:33.240
+!MESSAGE Telnet session connected on port 2333->50391 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 22:19:03.513
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 22:19:04.276
+!MESSAGE Telnet session connected on port 2333->51355 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 22:20:29.093
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 22:20:29.787
+!MESSAGE Telnet session connected on port 2333->52330 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 22:22:16.835
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 22:22:17.575
+!MESSAGE Telnet session connected on port 2333->53297 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 22:22:36.069
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 22:22:36.802
+!MESSAGE Telnet session connected on port 2333->54105 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 22:22:58.805
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 22:22:59.540
+!MESSAGE Telnet session connected on port 2333->55070 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 22:23:15.035
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 22:23:15.771
+!MESSAGE Telnet session connected on port 2333->56041 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 22:23:39.570
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 22:23:40.272
+!MESSAGE Telnet session connected on port 2333->57014 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 22:24:20.275
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 22:24:20.982
+!MESSAGE Telnet session connected on port 2333->57980 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 22:24:40.215
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 22:24:40.918
+!MESSAGE Telnet session connected on port 2333->58952 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 22:25:26.617
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 22:25:27.339
+!MESSAGE Telnet session connected on port 2333->59923 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 22:25:58.893
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 22:25:59.656
+!MESSAGE Telnet session connected on port 2333->60897 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 22:33:26.631
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 22:33:27.357
+!MESSAGE Telnet session connected on port 2333->61894 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 22:33:55.196
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 22:33:55.927
+!MESSAGE Telnet session connected on port 2333->62867 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2025-11-29 23:02:43.403
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@3b5abd9f): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Suspend operation timeout.' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2025-11-29 23:02:43.403
+!MESSAGE Suspend operation timeout.
+
+!ENTRY com.crt.utils 1 0 2025-11-29 23:47:35.506
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 23:47:36.211
+!MESSAGE Telnet session connected on port 2333->62600 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 23:47:55.958
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 23:47:56.701
+!MESSAGE Telnet session connected on port 2333->63574 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 23:48:36.832
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 23:48:37.535
+!MESSAGE Telnet session connected on port 2333->52819 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 23:48:59.871
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 23:49:00.595
+!MESSAGE Telnet session connected on port 2333->53821 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 23:51:40.492
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 23:51:41.175
+!MESSAGE Telnet session connected on port 2333->54793 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 23:53:01.173
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 23:53:01.962
+!MESSAGE Telnet session connected on port 2333->55772 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 23:53:27.658
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 23:53:28.383
+!MESSAGE Telnet session connected on port 2333->56744 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 23:54:02.262
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 23:54:02.990
+!MESSAGE Telnet session connected on port 2333->57720 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 23:54:51.716
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 23:54:52.447
+!MESSAGE Telnet session connected on port 2333->58697 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 23:55:28.241
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 23:55:28.968
+!MESSAGE Telnet session connected on port 2333->59670 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 23:55:56.257
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 23:55:56.999
+!MESSAGE Telnet session connected on port 2333->60641 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-29 23:56:35.474
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-29 23:56:36.202
+!MESSAGE Telnet session connected on port 2333->61615 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 00:00:29.974
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 00:00:30.724
+!MESSAGE Telnet session connected on port 2333->62705 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 00:01:42.531
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 00:01:43.271
+!MESSAGE Telnet session connected on port 2333->56601 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 00:03:53.700
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 00:03:54.437
+!MESSAGE Telnet session connected on port 2333->50356 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 00:04:24.491
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 00:04:25.239
+!MESSAGE Telnet session connected on port 2333->51331 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 00:05:15.795
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 00:05:16.508
+!MESSAGE Telnet session connected on port 2333->52303 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 00:07:12.947
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 00:07:13.674
+!MESSAGE Telnet session connected on port 2333->52599 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 00:09:39.409
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 00:09:40.118
+!MESSAGE Telnet session connected on port 2333->53554 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 00:18:29.706
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 00:18:30.445
+!MESSAGE Telnet session connected on port 2333->53535 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 00:21:20.988
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 00:21:21.730
+!MESSAGE Telnet session connected on port 2333->54339 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 00:40:47.931
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 00:40:48.674
+!MESSAGE Telnet session connected on port 2333->56287 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 00:41:49.813
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 00:41:50.538
+!MESSAGE Telnet session connected on port 2333->57264 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 00:42:38.874
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 00:42:39.587
+!MESSAGE Telnet session connected on port 2333->58235 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 00:44:13.707
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 00:44:14.441
+!MESSAGE Telnet session connected on port 2333->59210 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 00:45:30.011
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 00:45:30.713
+!MESSAGE Telnet session connected on port 2333->60176 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 00:46:09.003
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 00:46:09.705
+!MESSAGE Telnet session connected on port 2333->61149 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 00:46:41.466
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 00:46:42.163
+!MESSAGE Telnet session connected on port 2333->62121 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 00:48:02.111
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 00:48:02.867
+!MESSAGE Telnet session connected on port 2333->63090 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 00:48:37.273
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 00:48:38.016
+!MESSAGE Telnet session connected on port 2333->51105 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 00:54:17.360
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 00:54:18.084
+!MESSAGE Telnet session connected on port 2333->52079 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 00:55:34.948
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 00:55:35.641
+!MESSAGE Telnet session connected on port 2333->53045 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 00:59:15.495
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 00:59:16.245
+!MESSAGE Telnet session connected on port 2333->54016 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 01:01:27.218
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 01:01:27.912
+!MESSAGE Telnet session connected on port 2333->55000 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 01:02:20.653
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 01:02:21.383
+!MESSAGE Telnet session connected on port 2333->55978 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 01:09:26.796
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 01:09:27.498
+!MESSAGE Telnet session connected on port 2333->52621 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 02:32:44.078
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 02:32:44.845
+!MESSAGE Telnet session connected on port 2333->52490 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 02:34:02.770
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 02:34:03.477
+!MESSAGE Telnet session connected on port 2333->53459 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 02:34:49.219
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 02:34:49.946
+!MESSAGE Telnet session connected on port 2333->54433 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 02:35:36.450
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 02:35:37.168
+!MESSAGE Telnet session connected on port 2333->55405 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 02:36:14.164
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 02:36:14.871
+!MESSAGE Telnet session connected on port 2333->56382 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 02:37:51.742
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 02:37:52.440
+!MESSAGE Telnet session connected on port 2333->57350 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 02:39:07.324
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 02:39:08.057
+!MESSAGE Telnet session connected on port 2333->58325 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 02:39:23.910
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 02:39:24.629
+!MESSAGE Telnet session connected on port 2333->59295 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 02:40:07.092
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 02:40:07.819
+!MESSAGE Telnet session connected on port 2333->60267 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 02:41:09.066
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 02:41:09.787
+!MESSAGE Telnet session connected on port 2333->61240 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2025-11-30 03:15:40.272
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@2365fa2f): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Suspend operation timeout.' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2025-11-30 03:15:40.272
+!MESSAGE Suspend operation timeout.
+
+!ENTRY com.crt.utils 1 0 2025-11-30 03:55:12.197
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 03:55:12.927
+!MESSAGE Telnet session connected on port 2333->50994 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 03:57:52.039
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 03:57:52.776
+!MESSAGE Telnet session connected on port 2333->51974 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 04:06:29.223
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 04:06:29.928
+!MESSAGE Telnet session connected on port 2333->52961 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 04:12:50.823
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 04:12:51.557
+!MESSAGE Telnet session connected on port 2333->53943 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 04:13:20.045
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 04:13:20.765
+!MESSAGE Telnet session connected on port 2333->54916 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 04:14:05.513
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 04:14:06.230
+!MESSAGE Telnet session connected on port 2333->55884 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 04:14:19.101
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 04:14:19.798
+!MESSAGE Telnet session connected on port 2333->56796 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 04:14:49.811
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 04:14:50.552
+!MESSAGE Telnet session connected on port 2333->57768 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 04:15:57.325
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 04:15:58.040
+!MESSAGE Telnet session connected on port 2333->58752 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 04:20:38.799
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 04:20:39.529
+!MESSAGE Telnet session connected on port 2333->59726 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 05:29:28.176
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 05:29:28.881
+!MESSAGE Telnet session connected on port 2333->53922 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 05:29:38.424
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 05:29:39.152
+!MESSAGE Telnet session connected on port 2333->54386 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2025-11-30 05:30:29.423
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIMemory$4@1a68098f): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-data-evaluate-expression &(NRF_RF_SETUP)
+Error message from debugger back end:
+Attempt to take address of value not located in memory. java.lang.Exception: Attempt to take address of value not located in memory.' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2025-11-30 05:30:29.423
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression &(NRF_RF_SETUP)
+Error message from debugger back end:
+Attempt to take address of value not located in memory.
+!STACK 0
+java.lang.Exception: Attempt to take address of value not located in memory.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY com.crt.utils 1 0 2025-11-30 05:31:48.668
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 05:31:49.402
+!MESSAGE Telnet session connected on port 2333->55332 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 05:32:40.486
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 05:32:41.223
+!MESSAGE Telnet session connected on port 2333->56258 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 05:34:18.609
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 05:34:19.327
+!MESSAGE Telnet session connected on port 2333->57081 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 05:38:41.614
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 05:38:42.322
+!MESSAGE Telnet session connected on port 2333->58032 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 05:49:29.119
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 05:49:29.841
+!MESSAGE Telnet session connected on port 2333->49389 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 05:50:38.946
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 05:50:39.690
+!MESSAGE Telnet session connected on port 2333->50682 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 05:54:58.074
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 05:54:58.792
+!MESSAGE Telnet session connected on port 2333->55680 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2025-11-30 06:02:18.248
+!MESSAGE There is already a running debug session for the launch configuration 'MCXN947_Project JLink Debug'.
+
+!ENTRY com.crt.utils 1 0 2025-11-30 06:02:24.828
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 06:02:25.535
+!MESSAGE Telnet session connected on port 2333->63970 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 06:03:28.126
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 06:03:28.877
+!MESSAGE Telnet session connected on port 2333->64925 @ 127.0.0.1
+
+!ENTRY com.crt.log 4 -1 2025-11-30 06:05:17.930
+!MESSAGE Program file does not exist
+!STACK 0
+java.lang.Exception: org.eclipse.core.runtime.CoreException: Program file does not exist
+	at com.crt.utils.general.Reporter.log(Reporter.java:592)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager$2.run(SymbolWrapper.java:130)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Program file does not exist
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.abort(LaunchUtils.java:195)
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:129)
+	at com.crt.utils.general.SymbolWrapper.getGlobals(SymbolWrapper.java:407)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager.getSymbols(SymbolWrapper.java:183)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager$2.run(SymbolWrapper.java:128)
+	... 1 more
+Caused by: java.io.FileNotFoundException: C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\Debug\MCXN947_Project.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	... 4 more
+
+!ENTRY com.crt.log 4 -1 2025-11-30 06:05:28.261
+!MESSAGE Program file does not exist
+!STACK 0
+java.lang.Exception: org.eclipse.core.runtime.CoreException: Program file does not exist
+	at com.crt.utils.general.Reporter.log(Reporter.java:592)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager$2.run(SymbolWrapper.java:130)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Program file does not exist
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.abort(LaunchUtils.java:195)
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:129)
+	at com.crt.utils.general.SymbolWrapper.getGlobals(SymbolWrapper.java:407)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager.getSymbols(SymbolWrapper.java:183)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager$2.run(SymbolWrapper.java:128)
+	... 1 more
+Caused by: java.io.FileNotFoundException: C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\Debug\MCXN947_Project.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	... 4 more
+
+!ENTRY com.crt.utils 1 0 2025-11-30 06:05:31.513
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 06:05:32.248
+!MESSAGE Telnet session connected on port 2333->51274 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 06:08:02.119
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 06:08:02.812
+!MESSAGE Telnet session connected on port 2333->52255 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 06:12:25.257
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 06:12:25.986
+!MESSAGE Telnet session connected on port 2333->56021 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 06:13:30.230
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 06:13:30.971
+!MESSAGE Telnet session connected on port 2333->53884 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 06:15:23.237
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 06:15:23.925
+!MESSAGE Telnet session connected on port 2333->54710 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 06:16:39.528
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 06:16:40.247
+!MESSAGE Telnet session connected on port 2333->55686 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 06:18:32.322
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 06:18:32.969
+!MESSAGE Telnet session connected on port 2333->54295 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2025-11-30 06:29:11.290
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@284d937c): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-target-select remote localhost:2331
+
+Error message from debugger back end:
+localhost:2331: Connection timed out. java.lang.Exception: localhost:2331: Connection timed out.' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2025-11-30 06:29:11.290
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:2331
+
+Error message from debugger back end:
+localhost:2331: Connection timed out.
+!STACK 0
+java.lang.Exception: localhost:2331: Connection timed out.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2025-11-30 06:29:12.354
+!MESSAGE Error in final launch sequence:
+
+Failed to execute MI command:
+-target-select remote localhost:2331
+
+Error message from debugger back end:
+localhost:2331: Connection timed out.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:2331
+
+Error message from debugger back end:
+localhost:2331: Connection timed out.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.nxp.mcuxpresso.core.debug.support.segger.launches.JLinkLaunchDelegate.launch(JLinkLaunchDelegate.java:310)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.Exception: localhost:2331: Connection timed out.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2025-11-30 06:29:12.356
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:2331
+
+Error message from debugger back end:
+localhost:2331: Connection timed out.
+!STACK 0
+java.lang.Exception: localhost:2331: Connection timed out.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY com.crt.utils 1 0 2025-11-30 06:29:30.333
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 06:29:31.061
+!MESSAGE Telnet session connected on port 2333->53234 @ 127.0.0.1
+
+!ENTRY com.crt.log 4 -1 2025-11-30 06:33:29.130
+!MESSAGE Program file does not exist
+!STACK 0
+java.lang.Exception: org.eclipse.core.runtime.CoreException: Program file does not exist
+	at com.crt.utils.general.Reporter.log(Reporter.java:592)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager$2.run(SymbolWrapper.java:130)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Program file does not exist
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.abort(LaunchUtils.java:195)
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:129)
+	at com.crt.utils.general.SymbolWrapper.getGlobals(SymbolWrapper.java:407)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager.getSymbols(SymbolWrapper.java:183)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager$2.run(SymbolWrapper.java:128)
+	... 1 more
+Caused by: java.io.FileNotFoundException: C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\Debug\MCXN947_Project.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	... 4 more
+
+!ENTRY com.crt.log 4 -1 2025-11-30 06:34:04.949
+!MESSAGE Program file does not exist
+!STACK 0
+java.lang.Exception: org.eclipse.core.runtime.CoreException: Program file does not exist
+	at com.crt.utils.general.Reporter.log(Reporter.java:592)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager$2.run(SymbolWrapper.java:130)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Program file does not exist
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.abort(LaunchUtils.java:195)
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:129)
+	at com.crt.utils.general.SymbolWrapper.getGlobals(SymbolWrapper.java:407)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager.getSymbols(SymbolWrapper.java:183)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager$2.run(SymbolWrapper.java:128)
+	... 1 more
+Caused by: java.io.FileNotFoundException: C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\Debug\MCXN947_Project.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	... 4 more
+
+!ENTRY com.crt.utils 1 0 2025-11-30 06:34:09.084
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 06:34:09.830
+!MESSAGE Telnet session connected on port 2333->54568 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 06:35:56.497
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 06:35:57.188
+!MESSAGE Telnet session connected on port 2333->58334 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 08:14:33.995
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 08:14:34.701
+!MESSAGE Telnet session connected on port 2333->49967 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 08:15:04.129
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 08:15:04.817
+!MESSAGE Telnet session connected on port 2333->56049 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 08:18:18.022
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 08:18:18.705
+!MESSAGE Telnet session connected on port 2333->62998 @ 127.0.0.1
+
+!ENTRY com.crt.log 4 -1 2025-11-30 08:22:13.812
+!MESSAGE Program file does not exist
+!STACK 0
+java.lang.Exception: org.eclipse.core.runtime.CoreException: Program file does not exist
+	at com.crt.utils.general.Reporter.log(Reporter.java:592)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager$2.run(SymbolWrapper.java:130)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Program file does not exist
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.abort(LaunchUtils.java:195)
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:129)
+	at com.crt.utils.general.SymbolWrapper.getGlobals(SymbolWrapper.java:407)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager.getSymbols(SymbolWrapper.java:183)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager$2.run(SymbolWrapper.java:128)
+	... 1 more
+Caused by: java.io.FileNotFoundException: C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\Debug\MCXN947_Project.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	... 4 more
+
+!ENTRY com.crt.utils 1 0 2025-11-30 08:22:16.955
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 08:22:17.648
+!MESSAGE Telnet session connected on port 2333->64120 @ 127.0.0.1
+
+!ENTRY com.crt.log 4 -1 2025-11-30 08:23:23.936
+!MESSAGE Program file does not exist
+!STACK 0
+java.lang.Exception: org.eclipse.core.runtime.CoreException: Program file does not exist
+	at com.crt.utils.general.Reporter.log(Reporter.java:592)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager$2.run(SymbolWrapper.java:130)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Program file does not exist
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.abort(LaunchUtils.java:195)
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:129)
+	at com.crt.utils.general.SymbolWrapper.getGlobals(SymbolWrapper.java:407)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager.getSymbols(SymbolWrapper.java:183)
+	at com.crt.utils.general.SymbolWrapper$SymbolsManager$2.run(SymbolWrapper.java:128)
+	... 1 more
+Caused by: java.io.FileNotFoundException: C:\PROJECTS\EMBEDDED\FINAL_PROJECT\OMNIROVER\MCXN947_Project.zip_expanded\MCXN947_Project\Debug\MCXN947_Project.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	... 4 more
+
+!ENTRY com.crt.utils 1 0 2025-11-30 08:23:27.343
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 08:23:28.032
+!MESSAGE Telnet session connected on port 2333->65101 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 08:24:50.801
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 08:24:51.504
+!MESSAGE Telnet session connected on port 2333->63568 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 08:25:25.466
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 08:25:26.172
+!MESSAGE Telnet session connected on port 2333->64554 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-11-30 08:25:56.012
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-11-30 08:25:56.686
+!MESSAGE Telnet session connected on port 2333->65532 @ 127.0.0.1
+
+!ENTRY org.eclipse.core.jobs 4 2 2025-12-01 14:13:37.044
+!MESSAGE An internal error occurred during: "UI refresh".
+!STACK 0
+org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1278)
+	at org.eclipse.swt.widgets.Display.getThread(Display.java:2590)
+	at com.nxp.swtools.common.ui.utils.progress.UIJobHelper.runNowOrInJob(UIJobHelper.java:215)
+	at com.nxp.swtools.validation.engine.internal.ValidationService$DelayedExecutor.cancelPrevJob(ValidationService.java:251)
+	at com.nxp.swtools.validation.engine.internal.ValidationService$DelayedExecutor.runAction(ValidationService.java:226)
+	at com.nxp.swtools.common.utils.runtime.DelayedExecution$1.run(DelayedExecution.java:379)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 4 0 2025-12-01 14:13:37.711
+!MESSAGE Error: Cannot invoke "org.eclipse.cdt.internal.core.CConfigBasedDescriptorManager.getDescriptor(org.eclipse.core.resources.IProject, boolean)" because the return value of "org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getDescriptorManager()" is null
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.cdt.internal.core.CConfigBasedDescriptorManager.getDescriptor(org.eclipse.core.resources.IProject, boolean)" because the return value of "org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getDescriptorManager()" is null
+	at org.eclipse.cdt.core.CCorePlugin.getCProjectDescription(CCorePlugin.java:881)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2$ScannerConfigInfoSet.load(ScannerConfigInfoFactory2.java:102)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2$ScannerConfigInfoSet.<init>(ScannerConfigInfoFactory2.java:96)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2.createInfoSet(ScannerConfigInfoFactory2.java:1373)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigProfileManager.createScannerConfigBuildInfo2Set(ScannerConfigProfileManager.java:223)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.getContainer(CfgScannerConfigInfoFactory2.java:118)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.createMap(CfgScannerConfigInfoFactory2.java:144)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.getInfo(CfgScannerConfigInfoFactory2.java:83)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getContextInfo(CfgDiscoveredPathManager.java:433)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getContextInfo(CfgDiscoveredPathManager.java:418)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getDiscoveredInfo(CfgDiscoveredPathManager.java:168)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.ProfileInfoProvider.getEntryValues(ProfileInfoProvider.java:68)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildEntryStorage.getDiscoveredEntries(BuildEntryStorage.java:203)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildEntryStorage.putEntriesToLevel(BuildEntryStorage.java:193)
+	at org.eclipse.cdt.core.settings.model.util.AbstractEntryStorage.initCache(AbstractEntryStorage.java:74)
+	at org.eclipse.cdt.core.settings.model.util.AbstractEntryStorage.getEntries(AbstractEntryStorage.java:37)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildLanguageData.getEntries(BuildLanguageData.java:163)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.getEntriesToCopy(CDefaultLanguageData.java:100)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.createStore(CDefaultLanguageData.java:91)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.copySettingsFrom(CDefaultLanguageData.java:84)
+	at org.eclipse.cdt.internal.core.settings.model.CLanguageSettingCache.copySettingsFrom(CLanguageSettingCache.java:49)
+	at org.eclipse.cdt.internal.core.settings.model.CLanguageSettingCache.<init>(CLanguageSettingCache.java:38)
+	at org.eclipse.cdt.internal.core.settings.model.CFolderDescriptionCache.copyLanguageData(CFolderDescriptionCache.java:82)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultFolderData.copyDataFrom(CDefaultFolderData.java:60)
+	at org.eclipse.cdt.internal.core.settings.model.CFolderDescriptionCache.<init>(CFolderDescriptionCache.java:40)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.copyFolderData(CConfigurationDescriptionCache.java:242)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultConfigurationData.copySettingsFrom(CDefaultConfigurationData.java:117)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.loadData(CConfigurationDescriptionCache.java:154)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescription.loadDatas(CProjectDescription.java:199)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.loadProjectDescription(XmlProjectDescriptionStorage.java:509)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.getProjectDescription(XmlProjectDescriptionStorage.java:239)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionInternal(CProjectDescriptionManager.java:426)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:408)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:402)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:395)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsScannerInfoProvider.getScannerInformation(LanguageSettingsScannerInfoProvider.java:78)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsScannerInfoProvider.getScannerInformation(LanguageSettingsScannerInfoProvider.java:1)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getScannerInfo(TranslationUnit.java:1070)
+	at org.eclipse.cdt.internal.core.pdom.indexer.ProjectIndexerInputAdapter.getBuildConfiguration(ProjectIndexerInputAdapter.java:160)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.getScannerInfo(AbstractIndexerTask.java:1030)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(AbstractIndexerTask.java:909)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:572)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:164)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMUpdateTask.run(PDOMUpdateTask.java:96)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:160)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2025-12-01 14:13:37.712
+!MESSAGE An internal error occurred during: "C/C++ Indexer".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.cdt.internal.core.CConfigBasedDescriptorManager.getDescriptor(org.eclipse.core.resources.IProject, boolean)" because the return value of "org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getDescriptorManager()" is null
+	at org.eclipse.cdt.core.CCorePlugin.getCProjectDescription(CCorePlugin.java:881)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2$ScannerConfigInfoSet.load(ScannerConfigInfoFactory2.java:102)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2$ScannerConfigInfoSet.<init>(ScannerConfigInfoFactory2.java:96)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2.createInfoSet(ScannerConfigInfoFactory2.java:1373)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigProfileManager.createScannerConfigBuildInfo2Set(ScannerConfigProfileManager.java:223)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.getContainer(CfgScannerConfigInfoFactory2.java:118)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.createMap(CfgScannerConfigInfoFactory2.java:144)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.getInfo(CfgScannerConfigInfoFactory2.java:83)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getContextInfo(CfgDiscoveredPathManager.java:433)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getContextInfo(CfgDiscoveredPathManager.java:418)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getDiscoveredInfo(CfgDiscoveredPathManager.java:168)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.ProfileInfoProvider.getEntryValues(ProfileInfoProvider.java:68)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildEntryStorage.getDiscoveredEntries(BuildEntryStorage.java:203)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildEntryStorage.putEntriesToLevel(BuildEntryStorage.java:193)
+	at org.eclipse.cdt.core.settings.model.util.AbstractEntryStorage.initCache(AbstractEntryStorage.java:74)
+	at org.eclipse.cdt.core.settings.model.util.AbstractEntryStorage.getEntries(AbstractEntryStorage.java:37)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildLanguageData.getEntries(BuildLanguageData.java:163)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.getEntriesToCopy(CDefaultLanguageData.java:100)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.createStore(CDefaultLanguageData.java:91)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.copySettingsFrom(CDefaultLanguageData.java:84)
+	at org.eclipse.cdt.internal.core.settings.model.CLanguageSettingCache.copySettingsFrom(CLanguageSettingCache.java:49)
+	at org.eclipse.cdt.internal.core.settings.model.CLanguageSettingCache.<init>(CLanguageSettingCache.java:38)
+	at org.eclipse.cdt.internal.core.settings.model.CFolderDescriptionCache.copyLanguageData(CFolderDescriptionCache.java:82)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultFolderData.copyDataFrom(CDefaultFolderData.java:60)
+	at org.eclipse.cdt.internal.core.settings.model.CFolderDescriptionCache.<init>(CFolderDescriptionCache.java:40)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.copyFolderData(CConfigurationDescriptionCache.java:242)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultConfigurationData.copySettingsFrom(CDefaultConfigurationData.java:117)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.loadData(CConfigurationDescriptionCache.java:154)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescription.loadDatas(CProjectDescription.java:199)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.loadProjectDescription(XmlProjectDescriptionStorage.java:509)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.getProjectDescription(XmlProjectDescriptionStorage.java:239)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionInternal(CProjectDescriptionManager.java:426)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:408)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:402)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:395)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsScannerInfoProvider.getScannerInformation(LanguageSettingsScannerInfoProvider.java:78)
+	at org.eclipse.cdt.internal.core.language.settings.providers.LanguageSettingsScannerInfoProvider.getScannerInformation(LanguageSettingsScannerInfoProvider.java:1)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getScannerInfo(TranslationUnit.java:1070)
+	at org.eclipse.cdt.internal.core.pdom.indexer.ProjectIndexerInputAdapter.getBuildConfiguration(ProjectIndexerInputAdapter.java:160)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.getScannerInfo(AbstractIndexerTask.java:1030)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(AbstractIndexerTask.java:909)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:572)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:164)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMUpdateTask.run(PDOMUpdateTask.java:96)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:160)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2025-12-01 14:17:39.610 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2025-12-01 14:21:00.947
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@2ceb21ee): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-target-select remote localhost:2331
+
+Error message from debugger back end:
+localhost:2331: Connection timed out. java.lang.Exception: localhost:2331: Connection timed out.' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2025-12-01 14:21:00.947
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:2331
+
+Error message from debugger back end:
+localhost:2331: Connection timed out.
+!STACK 0
+java.lang.Exception: localhost:2331: Connection timed out.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2025-12-01 14:21:02.104
+!MESSAGE Error in final launch sequence:
+
+Failed to execute MI command:
+-target-select remote localhost:2331
+
+Error message from debugger back end:
+localhost:2331: Connection timed out.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:2331
+
+Error message from debugger back end:
+localhost:2331: Connection timed out.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.nxp.mcuxpresso.core.debug.support.segger.launches.JLinkLaunchDelegate.launch(JLinkLaunchDelegate.java:310)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.Exception: localhost:2331: Connection timed out.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2025-12-01 14:21:02.104
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:2331
+
+Error message from debugger back end:
+localhost:2331: Connection timed out.
+!STACK 0
+java.lang.Exception: localhost:2331: Connection timed out.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2025-12-01 14:21:32.885
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@7aac630f): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-target-select remote localhost:2331
+
+Error message from debugger back end:
+localhost:2331: Connection timed out. java.lang.Exception: localhost:2331: Connection timed out.' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2025-12-01 14:21:32.886
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:2331
+
+Error message from debugger back end:
+localhost:2331: Connection timed out.
+!STACK 0
+java.lang.Exception: localhost:2331: Connection timed out.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2025-12-01 14:21:33.053
+!MESSAGE Error in final launch sequence:
+
+Failed to execute MI command:
+-target-select remote localhost:2331
+
+Error message from debugger back end:
+localhost:2331: Connection timed out.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select remote localhost:2331
+
+Error message from debugger back end:
+localhost:2331: Connection timed out.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.nxp.mcuxpresso.core.debug.support.segger.launches.JLinkLaunchDelegate.launch(JLinkLaunchDelegate.java:310)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.Exception: localhost:2331: Connection timed out.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2025-12-01 14:21:33.053
+!MESSAGE Failed to execute MI command:
+-target-select remote localhost:2331
+
+Error message from debugger back end:
+localhost:2331: Connection timed out.
+!STACK 0
+java.lang.Exception: localhost:2331: Connection timed out.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY com.crt.utils 1 0 2025-12-01 14:21:38.944
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-01 14:21:39.477
+!MESSAGE Telnet session connected on port 2333->59203 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-01 14:23:17.499
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-01 14:23:18.125
+!MESSAGE Telnet session connected on port 2333->53574 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-01 14:23:56.731
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-01 14:23:57.402
+!MESSAGE Telnet session connected on port 2333->54299 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-01 14:25:02.350
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-01 14:25:02.988
+!MESSAGE Telnet session connected on port 2333->55269 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-01 14:25:25.175
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-01 14:25:25.776
+!MESSAGE Telnet session connected on port 2333->56207 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-01 14:25:49.189
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-01 14:25:49.833
+!MESSAGE Telnet session connected on port 2333->57152 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-01 14:26:13.537
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-01 14:26:14.150
+!MESSAGE Telnet session connected on port 2333->58099 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-01 14:27:06.201
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-01 14:27:06.858
+!MESSAGE Telnet session connected on port 2333->51595 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-01 14:27:44.284
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-01 14:27:44.898
+!MESSAGE Telnet session connected on port 2333->52553 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-01 14:28:07.948
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-01 14:28:08.584
+!MESSAGE Telnet session connected on port 2333->53036 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-01 14:46:36.214
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-01 14:46:36.835
+!MESSAGE Telnet session connected on port 2333->61234 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2025-12-01 14:47:41.091
+!MESSAGE There is already a running debug session for the launch configuration 'MCXN947_Project JLink Debug'.
+
+!ENTRY com.crt.utils 1 0 2025-12-01 14:47:47.877
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-01 14:47:48.490
+!MESSAGE Telnet session connected on port 2333->62164 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-01 14:52:21.370
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-01 14:52:21.959
+!MESSAGE Telnet session connected on port 2333->63102 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-01 15:04:17.625
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-01 15:04:18.225
+!MESSAGE Telnet session connected on port 2333->64043 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-01 15:25:26.995
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-01 15:25:27.629
+!MESSAGE Telnet session connected on port 2333->64992 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-01 15:26:53.011
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-01 15:26:53.599
+!MESSAGE Telnet session connected on port 2333->49816 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2025-12-01 15:28:28.220
+!MESSAGE There is already a running debug session for the launch configuration 'MCXN947_Project JLink Debug'.
+
+!ENTRY com.crt.utils 1 0 2025-12-01 15:28:36.560
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-01 15:28:37.173
+!MESSAGE Telnet session connected on port 2333->50796 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-01 15:30:44.083
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-01 15:30:44.713
+!MESSAGE Telnet session connected on port 2333->51722 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-01 15:31:01.868
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-01 15:31:02.506
+!MESSAGE Telnet session connected on port 2333->52651 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2025-12-01 15:31:18.521
+!MESSAGE Composite status
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb.ui 4 0 2025-12-01 15:31:18.521
+!MESSAGE Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@19edf281[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@542148bb[Wrapped task = org.eclipse.cdt.dsf.gdb.internal.ui.actions.GdbDisconnectCommand$4@67239d8a]] rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@d6e96c6[Shutting down, pool size = 1, active threads = 0, queued tasks = 6, completed tasks = 5192]
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2025-12-01 15:31:18.521
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.GdbDisconnectCommand$1@28606b6d): Status ERROR: org.eclipse.cdt.dsf.gdb.ui code=0 Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@19edf281[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@542148bb[Wrapped task = org.eclipse.cdt.dsf.gdb.internal.ui.actions.GdbDisconnectCommand$4@67239d8a]] rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@d6e96c6[Shutting down, pool size = 1, active threads = 0, queued tasks = 6, completed tasks = 5192]' resulted in a rejected execution exception.
+
+!ENTRY com.crt.utils 1 0 2025-12-01 15:31:23.487
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-01 15:31:24.080
+!MESSAGE Telnet session connected on port 2333->53577 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-01 15:31:50.053
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-01 15:31:50.713
+!MESSAGE Telnet session connected on port 2333->54509 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-01 15:32:43.120
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-01 15:32:43.758
+!MESSAGE Telnet session connected on port 2333->55431 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-01 15:33:38.101
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-01 15:33:38.728
+!MESSAGE Telnet session connected on port 2333->56366 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-01 15:34:50.872
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-01 15:34:51.512
+!MESSAGE Telnet session connected on port 2333->57291 @ 127.0.0.1
+!SESSION 2025-12-02 02:20:54.438 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2025-12-02 02:21:11.546
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2025-12-02 03:16:36.264 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2025-12-02 03:16:49.162
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.crt.utils 1 0 2025-12-02 04:35:51.014
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-02 04:35:51.686
+!MESSAGE Telnet session connected on port 2333->63998 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-02 04:45:26.255
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-02 04:45:26.974
+!MESSAGE Telnet session connected on port 2333->56793 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-02 04:46:52.816
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-02 04:46:53.538
+!MESSAGE Telnet session connected on port 2333->57604 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-02 04:48:18.628
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-02 04:48:19.355
+!MESSAGE Telnet session connected on port 2333->58573 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2025-12-02 05:35:17.517
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@4b2b345b): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Suspend operation timeout.' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2025-12-02 05:35:17.517
+!MESSAGE Suspend operation timeout.
+
+!ENTRY com.crt.utils 1 0 2025-12-02 06:10:39.716
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-02 06:10:40.457
+!MESSAGE Telnet session connected on port 2333->65529 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-02 06:12:05.324
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-02 06:12:06.044
+!MESSAGE Telnet session connected on port 2333->50230 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-02 07:30:37.435
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-02 07:30:38.131
+!MESSAGE Telnet session connected on port 2333->50471 @ 127.0.0.1
+
+!ENTRY com.crt.log 4 -1 2025-12-02 07:50:43.353
+!MESSAGE Write failed: 
+
+!STACK 0
+java.lang.Exception: java.io.IOException: Write failed: 
+
+	at com.crt.utils.general.Reporter.log(Reporter.java:592)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.shutdown(MCXTelnetService.java:201)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.lambda$16(MCXTelnetService.java:689)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.handleDebugEvents(MCXTelnetService.java:689)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1265)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1299)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:498)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Write failed: 
+
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.writeToServer(MCXTelnetService.java:574)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.shutdown(MCXTelnetService.java:199)
+	... 8 more
+!SESSION 2025-12-02 08:56:34.253 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.crt.utils 1 0 2025-12-02 08:57:31.081
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-02 08:57:31.744
+!MESSAGE Telnet session connected on port 2333->59665 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-02 12:40:50.287
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-02 12:40:50.994
+!MESSAGE Telnet session connected on port 2333->58880 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-02 14:17:37.438
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-02 14:17:38.158
+!MESSAGE Telnet session connected on port 2333->63216 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-02 14:23:01.434
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-02 14:23:02.142
+!MESSAGE Telnet session connected on port 2333->57103 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-02 14:53:43.039
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-02 14:53:43.715
+!MESSAGE Telnet session connected on port 2333->63477 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-02 14:54:09.942
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-02 14:54:10.648
+!MESSAGE Telnet session connected on port 2333->63166 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-02 16:22:32.839
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-02 16:22:33.525
+!MESSAGE Telnet session connected on port 2333->60132 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-02 16:25:10.509
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-02 16:25:11.174
+!MESSAGE Telnet session connected on port 2333->53554 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-02 16:31:57.791
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-02 16:31:58.482
+!MESSAGE Telnet session connected on port 2333->54539 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-02 16:38:17.172
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-02 16:38:17.850
+!MESSAGE Telnet session connected on port 2333->50979 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-02 16:42:43.969
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-02 16:42:44.633
+!MESSAGE Telnet session connected on port 2333->59844 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-02 16:43:47.099
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-02 16:43:47.796
+!MESSAGE Telnet session connected on port 2333->51371 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-02 16:45:22.854
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-02 16:45:23.555
+!MESSAGE Telnet session connected on port 2333->52342 @ 127.0.0.1
+!SESSION 2025-12-03 10:31:41.708 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.crt.utils 1 0 2025-12-03 10:32:52.570
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-03 10:32:53.130
+!MESSAGE Telnet session connected on port 2333->49861 @ 127.0.0.1
+!SESSION 2025-12-03 14:05:04.392 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.crt.utils 1 0 2025-12-03 14:08:06.701
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-03 14:08:07.365
+!MESSAGE Telnet session connected on port 2333->52727 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2025-12-03 14:57:13.403
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2025-12-03 14:57:14.085
+!MESSAGE Telnet session connected on port 2333->56580 @ 127.0.0.1
+
+!ENTRY com.crt.log 4 -1 2025-12-03 16:57:41.570
+!MESSAGE Write failed: 
+
+!STACK 0
+java.lang.Exception: java.io.IOException: Write failed: 
+
+	at com.crt.utils.general.Reporter.log(Reporter.java:592)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.shutdown(MCXTelnetService.java:201)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.lambda$16(MCXTelnetService.java:689)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.handleDebugEvents(MCXTelnetService.java:689)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1265)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1299)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:498)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Write failed: 
+
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.writeToServer(MCXTelnetService.java:574)
+	at com.nxp.mcuxpresso.core.debug.services.MCXTelnetService.shutdown(MCXTelnetService.java:199)
+	... 8 more
