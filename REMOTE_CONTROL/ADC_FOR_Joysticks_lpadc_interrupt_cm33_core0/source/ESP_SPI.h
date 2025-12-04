@@ -1,0 +1,55 @@
+/*
+ * ESP_SPI.h
+ *
+ * Abstracted SPI Master Driver for MCXN947
+ * Handles 8MHz SPI communication with ESP32 slave
+ * Independent of board-specific app.h
+ */
+
+#ifndef ESP_SPI_H_
+#define ESP_SPI_H_
+
+#include <stdint.h>
+#include <stdbool.h>
+#include "fsl_lpspi.h"
+
+/* Definitions from the working example */
+#define ESP_SPI_TRANSFER_SIZE     40U    /*! Transfer dataSize - 20 bytes for reduced payload */
+#define ESP_SPI_BAUDRATE          8000000U /*! Transfer baudrate - 8MHz */
+
+/*******************************************************************************
+ * API Prototypes
+ ******************************************************************************/
+
+/*!
+ * @brief Initialize the LPSPI peripheral for ESP32 communication.
+ *
+ * @param base        LPSPI peripheral base address (e.g., LPSPI1).
+ * @param srcClock_Hz Source clock frequency for the LPSPI peripheral.
+ * @param whichPcs    The Chip Select (PCS) pin to use (e.g., kLPSPI_Pcs0).
+ */
+void ESP_SPI_Init(LPSPI_Type *base, uint32_t srcClock_Hz, lpspi_which_pcs_t whichPcs);
+
+/*!
+ * @brief Start a non-blocking transfer.
+ * * @param txData Pointer to the transmission buffer (must be at least ESP_SPI_TRANSFER_SIZE bytes).
+ * @param rxData Pointer to the reception buffer (must be at least ESP_SPI_TRANSFER_SIZE bytes).
+ */
+void ESP_SPI_StartTransfer(uint8_t *txData, uint8_t *rxData);
+
+/*!
+ * @brief Check if the current transfer is complete.
+ *
+ * @return true if transfer is finished, false otherwise.
+ */
+bool ESP_SPI_IsTransferCompleted(void);
+
+/*!
+ * @brief Interrupt Handler for the ESP SPI driver.
+ * * This function must be called from the actual LPSPI IRQ handler (e.g., LP_FLEXCOMM1_IRQHandler).
+ */
+void ESP_SPI_MasterIRQHandler(void);
+
+void PrepareTxBuffer(uint8_t *txBuffer, uint32_t packetCount);
+
+#endif /* ESP_SPI_H_ */
